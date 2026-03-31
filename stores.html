@@ -335,6 +335,28 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
 .f-submit{display:inline-flex;align-items:center;gap:8px;background:var(--vermillion);color:var(--white);padding:14px 44px;border-radius:var(--radius);font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .3s var(--ease);font-family:var(--font-body);position:relative;overflow:hidden}
 .f-submit:hover{background:var(--vermillion-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,58,30,.25)}
 
+/* ── Flow steps ── */
+.flow-grid{display:flex;gap:0;align-items:flex-start;justify-content:center}
+.flow-step{flex:1;text-align:center;padding:20px 16px;position:relative}
+.flow-num{font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--white);background:var(--navy);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px}
+.flow-icon{width:64px;height:64px;margin:0 auto 14px;background:var(--bg-gray);border-radius:50%;display:grid;place-items:center;color:var(--navy);transition:all .35s var(--ease)}
+.flow-step:hover .flow-icon{background:var(--navy);color:var(--white)}
+.flow-step h4{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.45}
+.flow-step p{font-size:12px;color:var(--text-sub);line-height:1.9}
+.flow-arrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;padding-top:60px;color:var(--text-mute)}
+@media(max-width:768px){.flow-grid{flex-direction:column;align-items:center}.flow-arrow{transform:rotate(90deg);padding-top:0;padding:10px 0}}
+
+/* ── Product category cards ── */
+.prod-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.prod-card{text-align:center;padding:24px 12px;border:1px solid var(--border-light);border-radius:var(--radius);transition:all .35s var(--ease);background:var(--bg)}
+.prod-card:hover{border-color:var(--navy);box-shadow:var(--shadow-m);transform:translateY(-4px)}
+.prod-card .prod-ic{width:56px;height:56px;margin:0 auto 12px;background:var(--bg-gray);border-radius:50%;display:grid;place-items:center;color:var(--navy);transition:all .35s var(--ease)}
+.prod-card:hover .prod-ic{background:var(--navy);color:var(--white)}
+.prod-card h4{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;line-height:1.45}
+.prod-card p{font-size:11.5px;color:var(--text-sub);line-height:1.8}
+@media(max-width:1024px){.prod-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.prod-grid{grid-template-columns:1fr 1fr}}
+
 /* ── 2col layout ── */
 .lay-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 
@@ -392,14 +414,161 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
     <h3>塗料専門店だからできる提案</h3>
     <p>塗料とは適切な塗装方法により初めて「塗膜」という製品になります。またどのような物に塗装するのか、現在の下地は何なのか、どのくらい長持ちさせたいのか、どのくらいの価格帯が良いのか、などなどお客様のニーズによりご提案する塗料も変化します。</p>
     <p>塗料の専門店としての知識を活かして、お客様のニーズに合わせた様々な塗料をご提案します。また、商品の配達も承っております。店舗に引き取りに行けない場合や、現場への納品など、その都度対応させていただきますので、お気軽にご相談ください。</p>
-    <div class="content-img">店舗外観写真</div>
+    <div class="content-img"><svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+      <!-- Sky -->
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d0e8f8"/><stop offset="100%" stop-color="#e8f0f6"/></linearGradient>
+        <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5f0e8"/><stop offset="100%" stop-color="#e8e0d0"/></linearGradient>
+        <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0b2948"/><stop offset="100%" stop-color="#155a96"/></linearGradient>
+      </defs>
+      <rect width="800" height="450" fill="url(#sky)"/>
+      <!-- Ground -->
+      <rect x="0" y="360" width="800" height="90" fill="#d4cfc6"/>
+      <rect x="0" y="360" width="800" height="4" fill="#b8b0a4"/>
+      <!-- Building -->
+      <rect x="120" y="110" width="560" height="250" fill="url(#wallG)" rx="2"/>
+      <!-- Roof -->
+      <rect x="110" y="95" width="580" height="24" fill="url(#roofG)" rx="2"/>
+      <rect x="105" y="87" width="590" height="12" fill="#0b2948" rx="2"/>
+      <!-- Sign board -->
+      <rect x="260" y="108" width="280" height="52" fill="#0b2948" rx="4"/>
+      <text x="400" y="142" text-anchor="middle" fill="#ffffff" font-family="serif" font-size="28" font-weight="bold">大貫塗料</text>
+      <!-- Sub sign -->
+      <rect x="310" y="166" width="180" height="18" fill="#c93a1e" rx="2"/>
+      <text x="400" y="180" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">ONUKI PAINT CO., LTD.</text>
+      <!-- Windows -->
+      <rect x="150" y="200" width="100" height="80" fill="#a8d4e8" rx="2" stroke="#8ab0c4" stroke-width="1.5"/>
+      <line x1="200" y1="200" x2="200" y2="280" stroke="#8ab0c4" stroke-width="1"/>
+      <line x1="150" y1="240" x2="250" y2="240" stroke="#8ab0c4" stroke-width="1"/>
+      <rect x="280" y="200" width="100" height="80" fill="#a8d4e8" rx="2" stroke="#8ab0c4" stroke-width="1.5"/>
+      <line x1="330" y1="200" x2="330" y2="280" stroke="#8ab0c4" stroke-width="1"/>
+      <line x1="280" y1="240" x2="380" y2="240" stroke="#8ab0c4" stroke-width="1"/>
+      <!-- Door -->
+      <rect x="430" y="210" width="90" height="150" fill="#1a7a6d" rx="3"/>
+      <rect x="435" y="215" width="38" height="140" fill="#88c4b8" rx="2"/>
+      <rect x="477" y="215" width="38" height="140" fill="#88c4b8" rx="2"/>
+      <circle cx="470" cy="290" r="4" fill="#b07d2f"/>
+      <!-- Right window -->
+      <rect x="560" y="200" width="100" height="80" fill="#a8d4e8" rx="2" stroke="#8ab0c4" stroke-width="1.5"/>
+      <line x1="610" y1="200" x2="610" y2="280" stroke="#8ab0c4" stroke-width="1"/>
+      <line x1="560" y1="240" x2="660" y2="240" stroke="#8ab0c4" stroke-width="1"/>
+      <!-- Paint cans display outside -->
+      <rect x="160" y="320" width="28" height="36" fill="#c93a1e" rx="3"/>
+      <rect x="160" y="316" width="28" height="6" fill="#a83018" rx="1"/>
+      <rect x="196" y="326" width="24" height="30" fill="#1a7a6d" rx="3"/>
+      <rect x="196" y="322" width="24" height="6" fill="#146a5d" rx="1"/>
+      <rect x="228" y="330" width="22" height="26" fill="#b07d2f" rx="3"/>
+      <rect x="228" y="326" width="22" height="6" fill="#9a6a20" rx="1"/>
+      <!-- Right side paint cans -->
+      <rect x="560" y="320" width="28" height="36" fill="#155a96" rx="3"/>
+      <rect x="560" y="316" width="28" height="6" fill="#0e3461" rx="1"/>
+      <rect x="596" y="328" width="24" height="28" fill="#c93a1e" rx="3"/>
+      <rect x="596" y="324" width="24" height="6" fill="#a83018" rx="1"/>
+      <rect x="628" y="332" width="22" height="24" fill="#1a7a6d" rx="3"/>
+      <rect x="628" y="328" width="22" height="6" fill="#146a5d" rx="1"/>
+      <!-- Awning -->
+      <path d="M140 195 L660 195 L650 200 L150 200 Z" fill="#c93a1e" opacity="0.9"/>
+      <!-- Decorative stripes on awning -->
+      <rect x="180" y="195" width="20" height="5" fill="#a83018"/>
+      <rect x="240" y="195" width="20" height="5" fill="#a83018"/>
+      <rect x="300" y="195" width="20" height="5" fill="#a83018"/>
+      <rect x="500" y="195" width="20" height="5" fill="#a83018"/>
+      <rect x="560" y="195" width="20" height="5" fill="#a83018"/>
+      <rect x="620" y="195" width="20" height="5" fill="#a83018"/>
+      <!-- Trees -->
+      <rect x="80" y="290" width="10" height="70" fill="#8a7a60"/>
+      <circle cx="85" cy="270" r="30" fill="#5a8a50"/>
+      <circle cx="75" cy="285" r="22" fill="#4a7a42"/>
+      <circle cx="95" cy="280" r="24" fill="#6a9a58"/>
+      <rect x="710" y="300" width="8" height="60" fill="#8a7a60"/>
+      <circle cx="714" cy="285" r="25" fill="#5a8a50"/>
+      <circle cx="704" cy="296" r="18" fill="#4a7a42"/>
+      <!-- Clouds -->
+      <ellipse cx="650" cy="50" rx="60" ry="20" fill="white" opacity="0.6"/>
+      <ellipse cx="680" cy="45" rx="40" ry="16" fill="white" opacity="0.5"/>
+      <ellipse cx="200" cy="40" rx="50" ry="16" fill="white" opacity="0.4"/>
+    </svg></div>
     <p>大貫塗料では、住宅等の塗り替え工事も承っております。ハウスメーカーなど他のリフォーム業者にはない、塗料専門店としての知識とこれまでのノウハウを活かして、担当者が施主様のご要望に沿った仕様をご提案いたします。</p>
   </div>
   <div class="content-block" data-reveal>
     <h3>自社調色</h3>
     <p>大貫塗料は各種塗料の「調色」を承っております。お客様がご希望する色を一色一色丁寧に制作します。各種色見本帳に合わせた色はもちろん、実際に塗装してある現物に合わせた色を調色することも可能です。</p>
     <p>また、関西ペイントの店内用缶内調色システム「K-MATCH」「ユニラント計量調色システム」も導入しております。これによって従来の調色品よりも短納期で調色することができます。塗装現場で塗料が急遽1缶だけ必要になった場合でも、営業時間内であればその日のうちに対応することが可能です（淡彩色のみ）。こういった調色品のご注文は１Lからお受けします。</p>
-    <div class="content-img">調色作業の写真</div>
+    <div class="content-img"><svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+      <defs>
+        <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8e0d0"/><stop offset="100%" stop-color="#d4cfc6"/></linearGradient>
+        <linearGradient id="canG1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0e0e0"/><stop offset="100%" stop-color="#c8c8c8"/></linearGradient>
+      </defs>
+      <!-- Background -->
+      <rect width="800" height="450" fill="#f5f0e8"/>
+      <!-- Work desk -->
+      <rect x="0" y="260" width="800" height="190" fill="url(#desk)"/>
+      <rect x="0" y="258" width="800" height="6" fill="#c4b8a8"/>
+      <!-- Wall shelves -->
+      <rect x="50" y="60" width="700" height="8" fill="#b8a890" rx="1"/>
+      <!-- Small bottles on shelf -->
+      <rect x="80" y="28" width="20" height="32" fill="#c93a1e" rx="3"/><rect x="80" y="24" width="20" height="6" fill="#a83018" rx="1"/>
+      <rect x="110" y="32" width="18" height="28" fill="#155a96" rx="3"/><rect x="110" y="28" width="18" height="6" fill="#0e3461" rx="1"/>
+      <rect x="138" y="30" width="18" height="30" fill="#1a7a6d" rx="3"/><rect x="138" y="26" width="18" height="6" fill="#146a5d" rx="1"/>
+      <rect x="166" y="34" width="16" height="26" fill="#b07d2f" rx="3"/><rect x="166" y="30" width="16" height="6" fill="#9a6a20" rx="1"/>
+      <rect x="194" y="28" width="20" height="32" fill="#8a3060" rx="3"/><rect x="194" y="24" width="20" height="6" fill="#6a2048" rx="1"/>
+      <rect x="224" y="32" width="18" height="28" fill="#c93a1e" rx="3" opacity="0.7"/>
+      <rect x="252" y="30" width="18" height="30" fill="#4a7a42" rx="3"/>
+      <!-- Second shelf -->
+      <rect x="50" y="140" width="700" height="8" fill="#b8a890" rx="1"/>
+      <rect x="80" y="106" width="22" height="34" fill="#155a96" rx="3"/><rect x="80" y="102" width="22" height="6" fill="#0e3461" rx="1"/>
+      <rect x="112" y="110" width="20" height="30" fill="#c93a1e" rx="3"/><rect x="112" y="106" width="20" height="6" fill="#a83018" rx="1"/>
+      <rect x="142" y="108" width="22" height="32" fill="#1a7a6d" rx="3"/>
+      <rect x="174" y="112" width="18" height="28" fill="#b07d2f" rx="3"/>
+      <!-- Large paint can on desk (being mixed) -->
+      <rect x="300" y="270" width="80" height="90" fill="url(#canG1)" rx="5" stroke="#aaa" stroke-width="1"/>
+      <rect x="300" y="266" width="80" height="10" fill="#b0b0b0" rx="2"/>
+      <ellipse cx="340" cy="310" rx="30" ry="8" fill="#155a96" opacity="0.7"/>
+      <!-- Mixing stick -->
+      <rect x="335" y="230" width="8" height="80" fill="#b8a890" rx="2" transform="rotate(-12,339,270)"/>
+      <rect x="328" y="224" width="22" height="12" fill="#a09080" rx="2" transform="rotate(-12,339,230)"/>
+      <!-- Color palette / fan deck -->
+      <g transform="translate(500,280)">
+        <rect x="0" y="0" width="140" height="90" fill="#f8f4f0" rx="3" stroke="#d0c8b8" stroke-width="1"/>
+        <!-- Color strips -->
+        <rect x="8" y="8" width="18" height="74" fill="#c93a1e" rx="1"/>
+        <rect x="30" y="8" width="18" height="74" fill="#e86040" rx="1"/>
+        <rect x="52" y="8" width="18" height="74" fill="#f4a080" rx="1"/>
+        <rect x="74" y="8" width="18" height="74" fill="#1a7a6d" rx="1"/>
+        <rect x="96" y="8" width="18" height="74" fill="#4ab8a0" rx="1"/>
+        <rect x="118" y="8" width="18" height="74" fill="#a0e0d4" rx="1"/>
+      </g>
+      <!-- Small mixing cups -->
+      <ellipse cx="180" cy="330" rx="25" ry="8" fill="#d0d0d0"/>
+      <rect x="155" y="330" width="50" height="30" fill="#e0e0e0" rx="2"/>
+      <ellipse cx="180" cy="360" rx="25" ry="8" fill="#d0d0d0"/>
+      <ellipse cx="180" cy="335" rx="20" ry="6" fill="#c93a1e" opacity="0.6"/>
+      <ellipse cx="240" cy="338" rx="20" ry="6" fill="#d0d0d0"/>
+      <rect x="220" y="338" width="40" height="24" fill="#e0e0e0" rx="2"/>
+      <ellipse cx="240" cy="362" rx="20" ry="6" fill="#d0d0d0"/>
+      <ellipse cx="240" cy="342" rx="16" ry="5" fill="#155a96" opacity="0.6"/>
+      <!-- Scale / measuring device -->
+      <rect x="440" y="290" width="50" height="10" fill="#888" rx="2"/>
+      <rect x="450" y="272" width="30" height="20" fill="#555" rx="3"/>
+      <rect x="455" y="276" width="20" height="12" fill="#8ac" rx="1"/>
+      <text x="465" y="285" text-anchor="middle" fill="#fff" font-size="7" font-family="monospace">0.85</text>
+      <!-- Dropper bottle -->
+      <rect x="130" y="280" width="14" height="30" fill="#f0e8d8" rx="2" stroke="#c8c0b0" stroke-width="0.5"/>
+      <rect x="133" y="270" width="8" height="14" fill="#888" rx="1"/>
+      <rect x="135" y="262" width="4" height="10" fill="#666" rx="1"/>
+      <!-- Color swatches scattered -->
+      <rect x="680" y="300" width="40" height="50" fill="#fff" rx="2" stroke="#ddd" stroke-width="0.5" transform="rotate(5,700,325)"/>
+      <rect x="684" y="304" width="32" height="30" fill="#1a7a6d" rx="1" transform="rotate(5,700,325)"/>
+      <rect x="660" y="310" width="40" height="50" fill="#fff" rx="2" stroke="#ddd" stroke-width="0.5" transform="rotate(-8,680,335)"/>
+      <rect x="664" y="314" width="32" height="30" fill="#b07d2f" rx="1" transform="rotate(-8,680,335)"/>
+      <!-- K-MATCH system label on desk -->
+      <rect x="50" y="290" width="60" height="24" fill="#0b2948" rx="3"/>
+      <text x="80" y="306" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold" font-family="sans-serif">K-MATCH</text>
+      <!-- Overhead light -->
+      <rect x="350" y="0" width="100" height="8" fill="#d0d0d0"/>
+      <polygon points="370,8 380,40 420,40 430,8" fill="#e8e4d8" stroke="#c8c0b0" stroke-width="0.5"/>
+      <ellipse cx="400" cy="42" rx="22" ry="4" fill="#ffd" opacity="0.5"/>
+    </svg></div>
   </div>
   <div class="content-block" data-reveal>
     <h3>塗料の量り売り</h3>
@@ -407,6 +576,82 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
   </div>
 </div>
 </section>
+<section class="sec" style="background:var(--bg-warm)">
+<div class="wrap">
+  <div class="sh sh--c" data-reveal>
+    <div class="sh-en">Products</div>
+    <h2 class="sh-ja">お取り扱い商品</h2>
+    <p class="sh-sub">プロ仕様の塗料から一般向け製品まで、幅広いラインナップを取り揃えております。</p>
+  </div>
+  <div class="prod-grid">
+    <div class="prod-card" data-reveal="1">
+      <div class="prod-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><rect x="9" y="13" width="6" height="8"/><rect x="9" y="9" width="2.5" height="2.5"/><rect x="12.5" y="9" width="2.5" height="2.5"/></svg></div>
+      <h4>建築用塗料</h4>
+      <p>外壁・屋根・内装など建築物に最適な各種塗料を取り揃え</p>
+    </div>
+    <div class="prod-card" data-reveal="2">
+      <div class="prod-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 14V8a4 4 0 018 0v6"/><circle cx="16" cy="10" r="2"/><path d="M18 10h3"/></svg></div>
+      <h4>自動車補修塗料</h4>
+      <p>自動車板金塗装に対応した補修用塗料・調色対応</p>
+    </div>
+    <div class="prod-card" data-reveal="3">
+      <div class="prod-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M8 10c0 2 1.8 4 4 4s4-2 4-4"/><line x1="12" y1="2" x2="12" y2="6"/></svg></div>
+      <h4>木部用塗料</h4>
+      <p>ウッドデッキ・家具・フローリングなど木材を美しく保護</p>
+    </div>
+    <div class="prod-card" data-reveal="4">
+      <div class="prod-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16"/><rect x="8" y="4" width="8" height="16" rx="1"/><path d="M8 12h8"/><path d="M11 4V2M13 4V2"/></svg></div>
+      <h4>接着剤</h4>
+      <p>建築・木工・金属など用途に合わせた各種接着剤</p>
+    </div>
+    <div class="prod-card" data-reveal="5">
+      <div class="prod-ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 3H5a2 2 0 00-2 2v2h18V5a2 2 0 00-2-2z"/><path d="M3 7l2 14h14l2-14"/><path d="M8 11v4M12 11v4M16 11v4"/></svg></div>
+      <h4>塗装用具</h4>
+      <p>刷毛・ローラー・スプレーガンなどプロの道具を厳選</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+  <div class="sh sh--c" data-reveal>
+    <div class="sh-en">Flow</div>
+    <h2 class="sh-ja">ご利用の流れ</h2>
+    <p class="sh-sub">初めてのお客様も安心してご利用いただけるよう、丁寧に対応いたします。</p>
+  </div>
+  <div class="flow-grid" data-reveal>
+    <div class="flow-step">
+      <div class="flow-num">01</div>
+      <div class="flow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.11 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.7 2.34a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0122 16.92z"/></svg></div>
+      <h4>ご来店・お問い合わせ</h4>
+      <p>お電話・メール・ご来店<br>いずれでもお気軽にどうぞ</p>
+    </div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="flow-step">
+      <div class="flow-num">02</div>
+      <div class="flow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M8 9h8M8 13h4"/></svg></div>
+      <h4>ご相談・ご提案</h4>
+      <p>用途やご要望をお伺いし<br>最適な塗料をご提案します</p>
+    </div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="flow-step">
+      <div class="flow-num">03</div>
+      <div class="flow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <h4>調色・ご準備</h4>
+      <p>ご希望の色を丁寧に調色<br>必要量をお取り揃えします</p>
+    </div>
+    <div class="flow-arrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    <div class="flow-step">
+      <div class="flow-num">04</div>
+      <div class="flow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 3v5h-7V10z"/><circle cx="7" cy="20" r="2"/><circle cx="19" cy="20" r="2"/></svg></div>
+      <h4>お渡し・配達</h4>
+      <p>店舗でのお引き取りまたは<br>現場への配達も承ります</p>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="cta">
 <div class="wrap"><div class="cta-in">
   <div><h3>塗料のこと、何でもお尋ねください。</h3><p class="sub">ご来店・お電話・メール、お気軽にお問い合わせください。</p></div>
@@ -421,7 +666,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
   <div class="ft-grid2">
     <div class="ft-brand"><div style="display:flex;align-items:center;gap:10px"><div class="logo-mark" style="width:38px;height:38px;font-size:18px">大</div><div><div style="font-family:var(--font-display);font-size:14px;font-weight:800;color:white;letter-spacing:1.5px">大貫塗料</div><div style="font-family:var(--font-en);font-size:9px;color:rgba(255,255,255,.3);letter-spacing:1px">ONUKI PAINT CO., LTD.</div></div></div><p>栃木県鹿沼市の塗料専門店。昭和35年創業以来、塗料の販売・調色から塗装工事まで、プロの技術でお応えします。</p><div class="ft-soc"><a href="https://ja-jp.facebook.com/onukipaint" target="_blank" rel="noopener">Fb</a><a href="https://www.instagram.com/onukipaint/" target="_blank" rel="noopener">Ig</a><a href="https://lin.ee/G9HGsWh" target="_blank" rel="noopener">Li</a><a href="https://twitter.com/onuki_paint" target="_blank" rel="noopener">X</a></div></div>
     <div class="ft-col"><div class="ft-col-h">Menu</div><a href="index.html">ホーム</a><a href="stores.html">塗料専門店として</a><a href="business.html">業務内容</a><a href="case.html">施工事例</a><a href="company.html">会社案内</a></div>
-    <div class="ft-col"><div class="ft-col-h">Service</div><a href="#">塗料・接着剤販売</a><a href="#">屋根・外壁塗装</a><a href="#">遮熱・耐熱塗装</a><a href="#">木床研磨塗装</a><a href="#">塗床工事</a><a href="#">看板工事</a></div>
+    <div class="ft-col"><div class="ft-col-h">Service</div><a href="business.html#biz-paint">塗料・接着剤販売</a><a href="business.html#biz-house">屋根・外壁塗装</a><a href="business.html#biz-heat">遮熱・耐熱塗装</a><a href="business.html#biz-wood">木床研磨塗装</a><a href="business.html#biz-floor">塗床工事</a><a href="business.html#biz-sign">看板工事</a></div>
     <div class="ft-col"><div class="ft-col-h">Contact</div><a href="tel:0289640046" style="font-family:var(--font-en);font-size:18px;font-weight:700;color:#6cc8e4;padding:6px 0">0289-64-0046</a><a href="contact.html">メールフォーム</a><a href="company.html">アクセスマップ</a><p style="font-size:10.5px;color:rgba(255,255,255,.15);margin-top:10px;line-height:1.7">〒322-0025<br>栃木県鹿沼市緑町2-6-26</p></div>
   </div>
   <div class="ft-bot"><span>© ONUKITORYO CO.,LTD. All Rights Reserved.</span><div style="display:flex;gap:20px"><a href="#">ご利用にあたって</a><a href="#">個人情報の取扱い</a><a href="#">サイトマップ</a></div></div>
