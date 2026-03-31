@@ -212,13 +212,31 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
    ══════════════════════════════════════ */
 .wk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .wk{display:block;position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
-.wk-bg{width:100%;height:100%;transition:transform .65s var(--ease-out)}
+.wk-bg{width:100%;height:100%;transition:transform .65s var(--ease-out);display:flex;align-items:center;justify-content:center}
+.wk-bg svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;fill-opacity:.12;fill:white;stroke:rgba(255,255,255,.15);transition:fill-opacity .5s var(--ease-out),transform .5s var(--ease-out)}
+.wk:hover .wk-bg svg{fill-opacity:.18;transform:translate(-50%,-50%) scale(1.08)}
 .wk:hover .wk-bg{transform:scale(1.06)}
+.wk-desc{font-size:11px;color:rgba(255,255,255,.5);margin-top:3px;letter-spacing:.3px}
 .wk-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,20,35,.82),rgba(10,20,35,0) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;transition:background .3s}
 .wk:hover .wk-ov{background:linear-gradient(0deg,rgba(10,20,35,.9),rgba(10,20,35,.05) 65%)}
 .wk-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--white);background:rgba(255,255,255,.15);backdrop-filter:blur(4px);padding:2px 10px;border-radius:3px;margin-bottom:5px;width:fit-content;transition:background .3s}
 .wk:hover .wk-tag{background:var(--navy-light)}
 .wk-title{font-size:13.5px;font-weight:600;color:var(--white);line-height:1.55}
+
+/* ══════════════════════════════════════
+   PROCESS FLOW
+   ══════════════════════════════════════ */
+.pf{padding:88px 0;background:var(--bg-warm)}
+.pf-steps{display:flex;align-items:flex-start;justify-content:center;gap:0;margin-top:44px;position:relative}
+.pf-step{display:flex;flex-direction:column;align-items:center;text-align:center;flex:1;max-width:200px;position:relative}
+.pf-num{font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--navy-light);letter-spacing:1px;margin-bottom:8px}
+.pf-icon{width:64px;height:64px;background:var(--navy);border-radius:50%;display:grid;place-items:center;color:var(--white);margin-bottom:14px;position:relative;z-index:2;transition:all .35s var(--ease);box-shadow:0 4px 16px rgba(11,41,72,.15)}
+.pf-step:hover .pf-icon{transform:translateY(-4px);box-shadow:0 8px 24px rgba(11,41,72,.2);background:var(--navy-mid)}
+.pf-name{font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--ink);line-height:1.5;margin-bottom:4px}
+.pf-sub{font-size:11.5px;color:var(--text-sub);line-height:1.7}
+.pf-arrow{display:flex;align-items:center;padding-top:30px;color:var(--border);flex-shrink:0}
+.pf-arrow svg{width:24px;height:24px}
+@media(max-width:768px){.pf-steps{flex-direction:column;align-items:center;gap:8px}.pf-arrow{padding-top:0;transform:rotate(90deg)}.pf-step{max-width:100%;flex-direction:row;gap:14px;text-align:left}.pf-step>div{text-align:left}}
 
 /* ══════════════════════════════════════
    CTA
@@ -390,17 +408,62 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
 <div class="wrap">
   <div class="content-lead" data-reveal>大貫塗料は、塗料販売の他に塗装工事も承っております。塗料専門店の知識を活かし、お客様のご要望に合わせた塗装仕様のご提案をいたします。ここでは過去の施工事例をご紹介いたします。</div>
   <div class="wk-grid">
-    <a href="#" class="wk" data-reveal=""><div class="wk-bg" style="background:linear-gradient(155deg,#5a7a8a,#2a4a5a)"></div><div class="wk-ov"><span class="wk-tag">塗装工事</span><h3 class="wk-title">栃木県宇都宮市 サインポール塗装</h3></div></a>
-    <a href="#" class="wk" data-reveal="1"><div class="wk-bg" style="background:linear-gradient(155deg,#8a7a62,#5a4a32)"></div><div class="wk-ov"><span class="wk-tag">屋根塗装</span><h3 class="wk-title">栃木県鹿沼市 トタン屋根塗装工事</h3></div></a>
-    <a href="#" class="wk" data-reveal="2"><div class="wk-bg" style="background:linear-gradient(155deg,#5a8a6a,#3a6a4a)"></div><div class="wk-ov"><span class="wk-tag">遮熱+外壁</span><h3 class="wk-title">栃木県鹿沼市 住宅屋根外壁塗装</h3></div></a>
-    <a href="#" class="wk" data-reveal="3"><div class="wk-bg" style="background:linear-gradient(155deg,#7a5a7a,#4a2a4a)"></div><div class="wk-ov"><span class="wk-tag">遮熱塗装</span><h3 class="wk-title">栃木県鹿沼市 工場 鉄部塗装工事</h3></div></a>
-    <a href="#" class="wk" data-reveal="4"><div class="wk-bg" style="background:linear-gradient(155deg,#8a8060,#5a5030)"></div><div class="wk-ov"><span class="wk-tag">塗装工事</span><h3 class="wk-title">栃木県鹿沼市 住宅 基礎巾木塗装工事</h3></div></a>
-    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#5a8a7a,#2a6a4a)"></div><div class="wk-ov"><span class="wk-tag">外壁塗装</span><h3 class="wk-title">栃木県鹿沼市 住宅 外壁塗装工事（補助金対応）</h3></div></a>
-    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#6a8a6a,#3a5a3a)"></div><div class="wk-ov"><span class="wk-tag">外壁塗装</span><h3 class="wk-title">栃木県鹿沼市 事務所外壁塗装工事</h3></div></a>
-    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#8a6a5a,#5a3a2a)"></div><div class="wk-ov"><span class="wk-tag">屋根外壁</span><h3 class="wk-title">芳賀郡芳賀町 住宅 屋根外壁塗装工事</h3></div></a>
-    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#5a6a7a,#2a3a4a)"></div><div class="wk-ov"><span class="wk-tag">遮熱塗装</span><h3 class="wk-title">栃木県鹿沼市 鉄工所工場屋根 遮熱塗装工事</h3></div></a>
+    <a href="#" class="wk" data-reveal=""><div class="wk-bg" style="background:linear-gradient(155deg,#5a7a8a,#2a4a5a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="25" y="20" width="70" height="50" rx="4" fill="white" stroke="white" stroke-width="1.5"/><rect x="30" y="26" width="60" height="36" rx="2" fill="none" stroke="white" stroke-width="1"/><line x1="40" y1="34" x2="80" y2="34" stroke="white" stroke-width="2"/><line x1="45" y1="42" x2="75" y2="42" stroke="white" stroke-width="1.2"/><line x1="48" y1="49" x2="72" y2="49" stroke="white" stroke-width="1"/><rect x="50" y="70" width="6" height="30" rx="1" fill="white"/><rect x="64" y="70" width="6" height="30" rx="1" fill="white"/><rect x="42" y="96" width="36" height="6" rx="2" fill="white"/></svg></div><div class="wk-ov"><span class="wk-tag">看板塗装</span><h3 class="wk-title">栃木県宇都宮市 サインポール塗装</h3><div class="wk-desc">宇都宮市 / 看板サインポール再塗装</div></div></a>
+    <a href="#" class="wk" data-reveal="1"><div class="wk-bg" style="background:linear-gradient(155deg,#8a7a62,#5a4a32)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><polygon points="60,15 15,55 105,55" fill="white" stroke="white" stroke-width="1.5"/><polygon points="60,25 25,55 95,55" fill="none" stroke="white" stroke-width="1"/><rect x="25" y="55" width="70" height="45" fill="white" stroke="white" stroke-width="1"/><rect x="40" y="65" width="15" height="12" rx="1" fill="none" stroke="white" stroke-width="1.5" fill-opacity="0"/><rect x="65" y="65" width="15" height="12" rx="1" fill="none" stroke="white" stroke-width="1.5" fill-opacity="0"/><rect x="50" y="82" width="20" height="18" rx="1" fill="none" stroke="white" stroke-width="1.5"/></svg></div><div class="wk-ov"><span class="wk-tag">屋根塗装</span><h3 class="wk-title">栃木県鹿沼市 トタン屋根塗装工事</h3><div class="wk-desc">鹿沼市 / トタン屋根錆止め・上塗り</div></div></a>
+    <a href="#" class="wk" data-reveal="2"><div class="wk-bg" style="background:linear-gradient(155deg,#5a8a6a,#3a6a4a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><polygon points="60,18 18,52 102,52" fill="white" stroke="white" stroke-width="1.5"/><rect x="22" y="52" width="76" height="48" fill="white" stroke="white" stroke-width="1"/><rect x="35" y="62" width="14" height="11" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="71" y="62" width="14" height="11" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="49" y="80" width="18" height="20" rx="1" fill="none" stroke="white" stroke-width="1.2"/><circle cx="100" cy="22" r="12" fill="white" fill-opacity=".3"/><line x1="100" y1="6" x2="100" y2="10" stroke="white" stroke-width="1.5"/><line x1="100" y1="34" x2="100" y2="38" stroke="white" stroke-width="1.5"/><line x1="84" y1="22" x2="88" y2="22" stroke="white" stroke-width="1.5"/><line x1="112" y1="22" x2="116" y2="22" stroke="white" stroke-width="1.5"/></svg></div><div class="wk-ov"><span class="wk-tag">遮熱+外壁</span><h3 class="wk-title">栃木県鹿沼市 住宅屋根外壁塗装</h3><div class="wk-desc">鹿沼市 / 屋根スレート遮熱塗装・外壁シリコン塗装</div></div></a>
+    <a href="#" class="wk" data-reveal="3"><div class="wk-bg" style="background:linear-gradient(155deg,#7a5a7a,#4a2a4a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="40" width="90" height="55" rx="2" fill="white" stroke="white" stroke-width="1"/><polygon points="15,40 60,15 105,40" fill="white" stroke="white" stroke-width="1.5"/><line x1="15" y1="40" x2="105" y2="40" stroke="white" stroke-width="2"/><path d="M25,55 Q35,48 45,55 Q55,48 65,55 Q75,48 85,55 Q95,48 105,55" fill="none" stroke="white" stroke-width="1.2" stroke-dasharray="2,2"/><circle cx="98" cy="20" r="8" fill="white" fill-opacity=".25"/><path d="M98,10 L98,8 M98,32 L98,30 M88,20 L86,20 M110,20 L108,20" stroke="white" stroke-width="1" fill="none"/><path d="M30,65 L30,90 M50,60 L50,90 M70,65 L70,90 M90,60 L90,90" stroke="white" stroke-width="1" stroke-dasharray="3,3"/></svg></div><div class="wk-ov"><span class="wk-tag">遮熱塗装</span><h3 class="wk-title">栃木県鹿沼市 工場 鉄部塗装工事</h3><div class="wk-desc">鹿沼市 / 工場屋根遮熱塗装・鉄部錆止め</div></div></a>
+    <a href="#" class="wk" data-reveal="4"><div class="wk-bg" style="background:linear-gradient(155deg,#8a8060,#5a5030)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="30" width="100" height="65" rx="2" fill="white" stroke="white" stroke-width="1"/><line x1="10" y1="85" x2="110" y2="85" stroke="white" stroke-width="2"/><rect x="20" y="88" width="80" height="8" rx="1" fill="white" fill-opacity=".5"/><line x1="30" y1="85" x2="30" y2="96" stroke="white" stroke-width=".8"/><line x1="50" y1="85" x2="50" y2="96" stroke="white" stroke-width=".8"/><line x1="70" y1="85" x2="70" y2="96" stroke="white" stroke-width=".8"/><line x1="90" y1="85" x2="90" y2="96" stroke="white" stroke-width=".8"/><rect x="25" y="40" width="30" height="20" rx="1" fill="none" stroke="white" stroke-width="1"/><rect x="65" y="40" width="30" height="20" rx="1" fill="none" stroke="white" stroke-width="1"/><path d="M25,70 L55,70 M65,70 L95,70" stroke="white" stroke-width="1.2"/></svg></div><div class="wk-ov"><span class="wk-tag">塗床工事</span><h3 class="wk-title">栃木県鹿沼市 住宅 基礎巾木塗装工事</h3><div class="wk-desc">鹿沼市 / 基礎巾木・塗床エポキシ塗装</div></div></a>
+    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#5a8a7a,#2a6a4a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="25" width="80" height="75" rx="3" fill="white" stroke="white" stroke-width="1.5"/><rect x="30" y="35" width="22" height="16" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="68" y="35" width="22" height="16" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="30" y="60" width="22" height="16" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="68" y="60" width="22" height="16" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="48" y="82" width="24" height="18" rx="1" fill="none" stroke="white" stroke-width="1.5"/><line x1="16" y1="25" x2="16" y2="100" stroke="white" stroke-width="2"/><line x1="104" y1="25" x2="104" y2="100" stroke="white" stroke-width="2"/></svg></div><div class="wk-ov"><span class="wk-tag">外壁塗装</span><h3 class="wk-title">栃木県鹿沼市 住宅 外壁塗装工事（補助金対応）</h3><div class="wk-desc">鹿沼市 / 外壁シリコン塗装・補助金申請対応</div></div></a>
+    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#6a8a6a,#3a5a3a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="30" width="90" height="70" rx="3" fill="white" stroke="white" stroke-width="1.5"/><rect x="25" y="40" width="18" height="14" rx="1" fill="none" stroke="white" stroke-width="1" fill-opacity="0"/><rect x="51" y="40" width="18" height="14" rx="1" fill="none" stroke="white" stroke-width="1" fill-opacity="0"/><rect x="77" y="40" width="18" height="14" rx="1" fill="none" stroke="white" stroke-width="1" fill-opacity="0"/><rect x="25" y="62" width="18" height="14" rx="1" fill="none" stroke="white" stroke-width="1" fill-opacity="0"/><rect x="51" y="62" width="18" height="14" rx="1" fill="none" stroke="white" stroke-width="1" fill-opacity="0"/><rect x="77" y="62" width="18" height="14" rx="1" fill="none" stroke="white" stroke-width="1" fill-opacity="0"/><rect x="46" y="84" width="28" height="16" rx="1" fill="none" stroke="white" stroke-width="1.5"/><path d="M15,28 L15,100 M105,28 L105,100" stroke="white" stroke-width="1" stroke-dasharray="4,3"/></svg></div><div class="wk-ov"><span class="wk-tag">外壁塗装</span><h3 class="wk-title">栃木県鹿沼市 事務所外壁塗装工事</h3><div class="wk-desc">鹿沼市 / 事務所外壁フッ素塗装・シーリング打替</div></div></a>
+    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#8a6a5a,#5a3a2a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><polygon points="60,12 12,50 108,50" fill="white" stroke="white" stroke-width="1.5"/><rect x="18" y="50" width="84" height="50" fill="white" stroke="white" stroke-width="1"/><rect x="30" y="58" width="16" height="12" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="74" y="58" width="16" height="12" rx="1" fill="none" stroke="white" stroke-width="1.2" fill-opacity="0"/><rect x="48" y="78" width="24" height="22" rx="1" fill="none" stroke="white" stroke-width="1.5"/><line x1="14" y1="50" x2="14" y2="100" stroke="white" stroke-width="2"/><line x1="106" y1="50" x2="106" y2="100" stroke="white" stroke-width="2"/><line x1="12" y1="50" x2="108" y2="50" stroke="white" stroke-width="2.5"/></svg></div><div class="wk-ov"><span class="wk-tag">屋根外壁</span><h3 class="wk-title">芳賀郡芳賀町 住宅 屋根外壁塗装工事</h3><div class="wk-desc">芳賀町 / 屋根・外壁シリコン塗装・付帯部塗装</div></div></a>
+    <a href="#" class="wk" data-reveal="5"><div class="wk-bg" style="background:linear-gradient(155deg,#5a6a7a,#2a3a4a)"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="35" width="100" height="60" rx="2" fill="white" stroke="white" stroke-width="1"/><polygon points="10,35 60,10 110,35" fill="white" stroke="white" stroke-width="1.5"/><line x1="10" y1="35" x2="110" y2="35" stroke="white" stroke-width="2.5"/><circle cx="100" cy="18" r="10" fill="white" fill-opacity=".25"/><path d="M100,5 L100,8 M100,28 L100,31 M87,18 L90,18 M110,18 L113,18 M91,9 L93,11 M107,25 L109,27 M91,27 L93,25 M107,11 L109,9" stroke="white" stroke-width="1"/><rect x="25" y="45" width="70" height="4" rx="1" fill="white" fill-opacity=".4"/><rect x="25" y="55" width="70" height="4" rx="1" fill="white" fill-opacity=".3"/><rect x="25" y="65" width="70" height="4" rx="1" fill="white" fill-opacity=".2"/><rect x="25" y="75" width="70" height="4" rx="1" fill="white" fill-opacity=".15"/><rect x="25" y="85" width="70" height="4" rx="1" fill="white" fill-opacity=".1"/></svg></div><div class="wk-ov"><span class="wk-tag">遮熱塗装</span><h3 class="wk-title">栃木県鹿沼市 鉄工所工場屋根 遮熱塗装工事</h3><div class="wk-desc">鹿沼市 / 工場スレート屋根遮熱トップコート塗装</div></div></a>
   </div>
   <div class="pgn"><span class="cur">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">&gt;</a></div>
+</div>
+</section>
+<section class="pf">
+<div class="wrap">
+  <div class="sh sh--c" data-reveal>
+    <div class="sh-en">Process</div>
+    <h2 class="sh-ja">施工の流れ</h2>
+    <p class="sh-sub">お問い合わせから施工完了まで、丁寧にサポートいたします。</p>
+  </div>
+  <div class="pf-steps">
+    <div class="pf-step" data-reveal>
+      <div class="pf-num">STEP 01</div>
+      <div class="pf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div class="pf-name">お問い合わせ</div>
+      <div class="pf-sub">お電話・メール・LINEで<br>お気軽にご相談ください</div>
+    </div>
+    <div class="pf-arrow" data-reveal="1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></div>
+    <div class="pf-step" data-reveal="1">
+      <div class="pf-num">STEP 02</div>
+      <div class="pf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      <div class="pf-name">現地調査・診断</div>
+      <div class="pf-sub">専門スタッフが現地を訪問し<br>建物の状態を診断します</div>
+    </div>
+    <div class="pf-arrow" data-reveal="2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></div>
+    <div class="pf-step" data-reveal="2">
+      <div class="pf-num">STEP 03</div>
+      <div class="pf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg></div>
+      <div class="pf-name">お見積り</div>
+      <div class="pf-sub">最適な塗料と工法をご提案し<br>詳細なお見積りを作成します</div>
+    </div>
+    <div class="pf-arrow" data-reveal="3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></div>
+    <div class="pf-step" data-reveal="3">
+      <div class="pf-num">STEP 04</div>
+      <div class="pf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/><path d="M9 10h6"/></svg></div>
+      <div class="pf-name">施工</div>
+      <div class="pf-sub">丁寧な下地処理と<br>確かな技術で施工します</div>
+    </div>
+    <div class="pf-arrow" data-reveal="4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></div>
+    <div class="pf-step" data-reveal="4">
+      <div class="pf-num">STEP 05</div>
+      <div class="pf-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div>
+      <div class="pf-name">完了・アフターフォロー</div>
+      <div class="pf-sub">施工後の点検・メンテナンスも<br>責任を持って対応します</div>
+    </div>
+  </div>
 </div>
 </section>
 <section class="cta">
@@ -417,7 +480,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
   <div class="ft-grid2">
     <div class="ft-brand"><div style="display:flex;align-items:center;gap:10px"><div class="logo-mark" style="width:38px;height:38px;font-size:18px">大</div><div><div style="font-family:var(--font-display);font-size:14px;font-weight:800;color:white;letter-spacing:1.5px">大貫塗料</div><div style="font-family:var(--font-en);font-size:9px;color:rgba(255,255,255,.3);letter-spacing:1px">ONUKI PAINT CO., LTD.</div></div></div><p>栃木県鹿沼市の塗料専門店。昭和35年創業以来、塗料の販売・調色から塗装工事まで、プロの技術でお応えします。</p><div class="ft-soc"><a href="https://ja-jp.facebook.com/onukipaint" target="_blank" rel="noopener">Fb</a><a href="https://www.instagram.com/onukipaint/" target="_blank" rel="noopener">Ig</a><a href="https://lin.ee/G9HGsWh" target="_blank" rel="noopener">Li</a><a href="https://twitter.com/onuki_paint" target="_blank" rel="noopener">X</a></div></div>
     <div class="ft-col"><div class="ft-col-h">Menu</div><a href="index.html">ホーム</a><a href="stores.html">塗料専門店として</a><a href="business.html">業務内容</a><a href="case.html">施工事例</a><a href="company.html">会社案内</a></div>
-    <div class="ft-col"><div class="ft-col-h">Service</div><a href="#">塗料・接着剤販売</a><a href="#">屋根・外壁塗装</a><a href="#">遮熱・耐熱塗装</a><a href="#">木床研磨塗装</a><a href="#">塗床工事</a><a href="#">看板工事</a></div>
+    <div class="ft-col"><div class="ft-col-h">Service</div><a href="business.html#biz-paint">塗料・接着剤販売</a><a href="business.html#biz-house">屋根・外壁塗装</a><a href="business.html#biz-heat">遮熱・耐熱塗装</a><a href="business.html#biz-wood">木床研磨塗装</a><a href="business.html#biz-floor">塗床工事</a><a href="business.html#biz-sign">看板工事</a></div>
     <div class="ft-col"><div class="ft-col-h">Contact</div><a href="tel:0289640046" style="font-family:var(--font-en);font-size:18px;font-weight:700;color:#6cc8e4;padding:6px 0">0289-64-0046</a><a href="contact.html">メールフォーム</a><a href="company.html">アクセスマップ</a><p style="font-size:10.5px;color:rgba(255,255,255,.15);margin-top:10px;line-height:1.7">〒322-0025<br>栃木県鹿沼市緑町2-6-26</p></div>
   </div>
   <div class="ft-bot"><span>© ONUKITORYO CO.,LTD. All Rights Reserved.</span><div style="display:flex;gap:20px"><a href="#">ご利用にあたって</a><a href="#">個人情報の取扱い</a><a href="#">サイトマップ</a></div></div>

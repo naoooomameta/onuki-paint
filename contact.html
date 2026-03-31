@@ -334,6 +334,32 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
 .fr{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .f-submit{display:inline-flex;align-items:center;gap:8px;background:var(--vermillion);color:var(--white);padding:14px 44px;border-radius:var(--radius);font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .3s var(--ease);font-family:var(--font-body);position:relative;overflow:hidden}
 .f-submit:hover{background:var(--vermillion-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,58,30,.25)}
+.f-privacy{font-size:12px;color:var(--text-sub);text-align:center;margin-top:16px;line-height:1.8}
+.f-thankyou{text-align:center;padding:48px 24px;background:var(--teal-pale);border-radius:var(--radius);border:1px solid rgba(26,122,109,.15)}
+.f-thankyou svg{margin:0 auto 16px;display:block}
+.f-thankyou h3{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--ink);margin-bottom:10px}
+.f-thankyou p{font-size:14px;color:var(--text);line-height:2}
+
+/* ── Quick contact cards ── */
+.qc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:0}
+.qc-card{background:var(--bg-warm);border:1px solid var(--border-light);border-radius:var(--radius);padding:28px 24px;text-align:center;transition:all .35s var(--ease)}
+.qc-card:hover{box-shadow:var(--shadow-m);transform:translateY(-3px)}
+.qc-icon{width:52px;height:52px;margin:0 auto 14px;background:var(--navy);border-radius:50%;display:grid;place-items:center;color:var(--white)}
+.qc-label{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.qc-value{font-family:var(--font-en);font-size:20px;font-weight:700;color:var(--navy);line-height:1.4}
+.qc-value--ja{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--navy);line-height:1.6}
+.qc-note{font-size:11.5px;color:var(--text-mute);margin-top:4px}
+
+/* ── FAQ ── */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border:1px solid var(--border-light);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:border-color .25s}
+.faq-item:hover{border-color:var(--navy)}
+.faq-q{display:flex;align-items:center;gap:14px;padding:18px 22px;background:var(--bg-warm);font-size:14px;font-weight:600;color:var(--ink);line-height:1.6}
+.faq-q-badge{flex-shrink:0;width:30px;height:30px;background:var(--navy);color:var(--white);border-radius:4px;display:grid;place-items:center;font-family:var(--font-en);font-size:14px;font-weight:700}
+.faq-a{display:flex;align-items:flex-start;gap:14px;padding:18px 22px;font-size:13.5px;color:var(--text);line-height:2;border-top:1px solid var(--border-light)}
+.faq-a-badge{flex-shrink:0;width:30px;height:30px;background:var(--vermillion);color:var(--white);border-radius:4px;display:grid;place-items:center;font-family:var(--font-en);font-size:14px;font-weight:700}
+
+@media(max-width:768px){.qc-grid{grid-template-columns:1fr}}
 
 /* ── 2col layout ── */
 .lay-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -386,21 +412,77 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
     <div class="bc"><a href="index.html">トップ</a><span>＞</span><span>お問い合わせ</span></div>
   </div>
 </section>
+<section class="sec" style="padding-bottom:0">
+<div class="wrap">
+  <div class="sh sh--c" data-reveal><div class="sh-en">Contact Info</div><h2 class="sh-ja">お問い合わせ方法</h2><p class="sh-sub">お電話・FAX・ご来店など、お気軽にご連絡ください。</p></div>
+  <div class="qc-grid" data-reveal="1">
+    <div class="qc-card">
+      <div class="qc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+      <div class="qc-label">電話でのお問い合わせ</div>
+      <a href="tel:0289640046" class="qc-value">0289-64-0046</a>
+      <div class="qc-note">営業時間 8:00〜17:00</div>
+    </div>
+    <div class="qc-card">
+      <div class="qc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 10h8M8 14h5"/><path d="M6 4V2M18 4V2"/></svg></div>
+      <div class="qc-label">FAX</div>
+      <div class="qc-value">0289-64-0040</div>
+      <div class="qc-note">24時間受付</div>
+    </div>
+    <div class="qc-card">
+      <div class="qc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+      <div class="qc-label">所在地</div>
+      <div class="qc-value--ja">栃木県鹿沼市緑町2丁目6-26</div>
+      <div class="qc-note">〒322-0025</div>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="sec">
 <div class="wrap" style="max-width:760px">
   <div class="sh sh--c" data-reveal><div class="sh-en">Contact Form</div><h2 class="sh-ja">お問い合わせフォーム</h2><p class="sh-sub">塗料・塗装に関するご質問やお見積もりのご依頼など、お気軽にお問い合わせください。</p></div>
-  <div data-reveal="1" style="background:var(--bg-warm);border-radius:var(--radius);padding:18px 22px;margin-bottom:36px;display:flex;align-items:center;gap:14px;border:1px solid var(--border-light)">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-    <div><div style="font-size:12px;color:var(--text-mute)">お電話でのお問い合わせ</div><a href="tel:0289640046" style="font-family:var(--font-en);font-size:22px;font-weight:700;color:var(--navy)">0289-64-0046</a></div>
-  </div>
-  <form data-reveal="2" onsubmit="return false">
+  <form id="contactForm" data-reveal="1">
     <div class="fr"><div class="fg"><label class="fl">お名前<span class="req">必須</span></label><input type="text" class="fi" placeholder="山田 太郎"></div><div class="fg"><label class="fl">フリガナ<span class="req">必須</span></label><input type="text" class="fi" placeholder="ヤマダ タロウ"></div></div>
     <div class="fr"><div class="fg"><label class="fl">メールアドレス<span class="req">必須</span></label><input type="email" class="fi" placeholder="example@mail.com"></div><div class="fg"><label class="fl">電話番号</label><input type="tel" class="fi" placeholder="0289-64-0046"></div></div>
     <div class="fg"><label class="fl">ご住所</label><input type="text" class="fi" placeholder="栃木県鹿沼市..."></div>
     <div class="fg"><label class="fl">お問い合わせ種別</label><select class="fsel"><option value="">選択してください</option><option>塗料のご購入について</option><option>塗装工事のお見積もり</option><option>調色のご依頼</option><option>その他のお問い合わせ</option></select></div>
     <div class="fg"><label class="fl">お問い合わせ内容<span class="req">必須</span></label><textarea class="fta" placeholder="ご質問・ご相談内容をご記入ください。"></textarea></div>
     <div style="text-align:center;margin-top:28px"><button type="submit" class="f-submit ripple">送信する <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button></div>
+    <p class="f-privacy">ご入力いただいた個人情報は、お問い合わせへの対応にのみ使用いたします。</p>
   </form>
+  <div id="formThankyou" class="f-thankyou" style="display:none" data-reveal>
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    <h3>お問い合わせありがとうございます</h3>
+    <p>内容を確認の上、折り返しご連絡いたします。<br>通常2営業日以内にご返信いたしますので、しばらくお待ちください。</p>
+  </div>
+</div>
+</section>
+
+<section class="sec" style="background:var(--bg-gray)">
+<div class="wrap">
+  <div class="sh sh--c" data-reveal><div class="sh-en">FAQ</div><h2 class="sh-ja">よくあるご質問</h2><p class="sh-sub">お客様からよくいただくご質問をまとめました。</p></div>
+  <div class="faq-list" data-reveal="1">
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>個人でも購入できますか？</div>
+      <div class="faq-a"><span class="faq-a-badge">A</span><span>はい、個人のお客様も大歓迎です。DIY用の塗料から専門的な塗料まで幅広く取り扱っておりますので、お気軽にご来店ください。使い方や塗り方のアドバイスもいたします。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>塗装工事の見積りは無料ですか？</div>
+      <div class="faq-a"><span class="faq-a-badge">A</span><span>はい、現地調査・お見積りは無料で承っております。屋根や外壁の状態を確認した上で、最適な塗料と工法をご提案いたします。お気軽にお問い合わせください。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>配達は対応していますか？</div>
+      <div class="faq-a"><span class="faq-a-badge">A</span><span>はい、栃木県内の現場への配達に対応しております。数量やお届け先によって対応が異なりますので、まずはお電話またはフォームよりご相談ください。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>色の相談はできますか？</div>
+      <div class="faq-a"><span class="faq-a-badge">A</span><span>もちろんです。色見本帳をご用意しており、店頭で実際の色味をご確認いただけます。また、調色サービスにより、お好みの色を1缶からお作りすることも可能です。</span></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span class="faq-q-badge">Q</span>対応エリアはどこまでですか？</div>
+      <div class="faq-a"><span class="faq-a-badge">A</span><span>栃木県全域に対応しております。塗装工事については、鹿沼市・宇都宮市を中心に県内各地で施工実績がございます。遠方の場合もまずはご相談ください。</span></div>
+    </div>
+  </div>
 </div>
 </section>
 <section class="cta">
@@ -417,7 +499,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
   <div class="ft-grid2">
     <div class="ft-brand"><div style="display:flex;align-items:center;gap:10px"><div class="logo-mark" style="width:38px;height:38px;font-size:18px">大</div><div><div style="font-family:var(--font-display);font-size:14px;font-weight:800;color:white;letter-spacing:1.5px">大貫塗料</div><div style="font-family:var(--font-en);font-size:9px;color:rgba(255,255,255,.3);letter-spacing:1px">ONUKI PAINT CO., LTD.</div></div></div><p>栃木県鹿沼市の塗料専門店。昭和35年創業以来、塗料の販売・調色から塗装工事まで、プロの技術でお応えします。</p><div class="ft-soc"><a href="https://ja-jp.facebook.com/onukipaint" target="_blank" rel="noopener">Fb</a><a href="https://www.instagram.com/onukipaint/" target="_blank" rel="noopener">Ig</a><a href="https://lin.ee/G9HGsWh" target="_blank" rel="noopener">Li</a><a href="https://twitter.com/onuki_paint" target="_blank" rel="noopener">X</a></div></div>
     <div class="ft-col"><div class="ft-col-h">Menu</div><a href="index.html">ホーム</a><a href="stores.html">塗料専門店として</a><a href="business.html">業務内容</a><a href="case.html">施工事例</a><a href="company.html">会社案内</a></div>
-    <div class="ft-col"><div class="ft-col-h">Service</div><a href="#">塗料・接着剤販売</a><a href="#">屋根・外壁塗装</a><a href="#">遮熱・耐熱塗装</a><a href="#">木床研磨塗装</a><a href="#">塗床工事</a><a href="#">看板工事</a></div>
+    <div class="ft-col"><div class="ft-col-h">Service</div><a href="business.html#biz-paint">塗料・接着剤販売</a><a href="business.html#biz-house">屋根・外壁塗装</a><a href="business.html#biz-heat">遮熱・耐熱塗装</a><a href="business.html#biz-wood">木床研磨塗装</a><a href="business.html#biz-floor">塗床工事</a><a href="business.html#biz-sign">看板工事</a></div>
     <div class="ft-col"><div class="ft-col-h">Contact</div><a href="tel:0289640046" style="font-family:var(--font-en);font-size:18px;font-weight:700;color:#6cc8e4;padding:6px 0">0289-64-0046</a><a href="contact.html">メールフォーム</a><a href="company.html">アクセスマップ</a><p style="font-size:10.5px;color:rgba(255,255,255,.15);margin-top:10px;line-height:1.7">〒322-0025<br>栃木県鹿沼市緑町2-6-26</p></div>
   </div>
   <div class="ft-bot"><span>© ONUKITORYO CO.,LTD. All Rights Reserved.</span><div style="display:flex;gap:20px"><a href="#">ご利用にあたって</a><a href="#">個人情報の取扱い</a><a href="#">サイトマップ</a></div></div>
@@ -429,4 +511,5 @@ const ro=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.
 document.querySelectorAll('[data-reveal]').forEach(el=>ro.observe(el));
 document.querySelectorAll('.ripple').forEach(btn=>{btn.addEventListener('click',function(e){const r=document.createElement('span');r.className='ripple-wave';const rc=this.getBoundingClientRect();const sz=Math.max(rc.width,rc.height)*2;r.style.width=r.style.height=sz+'px';r.style.left=(e.clientX-rc.left-sz/2)+'px';r.style.top=(e.clientY-rc.top-sz/2)+'px';this.appendChild(r);r.addEventListener('animationend',()=>r.remove())})});
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+const cf=document.getElementById('contactForm');if(cf){cf.addEventListener('submit',function(e){e.preventDefault();this.style.display='none';const ty=document.getElementById('formThankyou');ty.style.display='';ty.classList.add('v');ty.scrollIntoView({behavior:'smooth',block:'center'})});}
 </script></body></html>
