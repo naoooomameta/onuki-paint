@@ -298,10 +298,6 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
 /* ══════════════════════════════════════
    PAGE LOADER
    ══════════════════════════════════════ */
-.page-loader{position:fixed;inset:0;z-index:9999;background:var(--bg);display:grid;place-items:center;transition:opacity .5s var(--ease),visibility .5s}
-.page-loader.done{opacity:0;visibility:hidden;pointer-events:none}
-.loader-mark{width:56px;height:56px;background:var(--navy);border-radius:6px;display:grid;place-items:center;color:var(--white);font-family:var(--font-display);font-size:28px;font-weight:800;animation:loaderPulse 1s ease-in-out infinite}
-@keyframes loaderPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.7}}
 
 /* ══════════════════════════════════════
    RESPONSIVE
@@ -331,7 +327,6 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
 </style>
 </head>
 <body>
-<div class="page-loader" id="pageLoader"><div class="loader-mark">大</div></div>
 
 <!-- ══════ HEADER ══════ -->
 <header class="hd" id="hd">
@@ -656,9 +651,6 @@ const counterObserver=new IntersectionObserver(entries=>{
 },{threshold:.3});
 document.querySelectorAll('.num-grid').forEach(el=>counterObserver.observe(el));
 
-/* ── Page loader ── */
-window.addEventListener('load',()=>{document.getElementById('pageLoader').classList.add('done')});
-setTimeout(()=>{document.getElementById('pageLoader').classList.add('done')},2500);
 </script>
 
 <!-- ── Floating CTA ── -->

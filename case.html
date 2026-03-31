@@ -386,7 +386,6 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cur
 </style>
 </head>
 <body>
-<div class="page-loader" id="pageLoader"><div class="loader-mark">大</div></div>
 
 <header class="hd" id="hd">
 <div class="hd-in">
@@ -767,5 +766,4 @@ document.querySelectorAll('.ba-slider').forEach(slider=>{
   <a href="#" id="backToTop" class="float-btn top" title="トップへ戻る"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></a>
 </div>
 const floatCta=document.getElementById("floatCta");if(floatCta){window.addEventListener("scroll",()=>{floatCta.classList.toggle("show",scrollY>400)},{passive:true});const btt=document.getElementById("backToTop");if(btt)btt.addEventListener("click",e=>{e.preventDefault();window.scrollTo({top:0,behavior:"smooth"})});}
-window.addEventListener("load",()=>{const pl=document.getElementById("pageLoader");if(pl)pl.classList.add("done")});setTimeout(()=>{const pl=document.getElementById("pageLoader");if(pl)pl.classList.add("done")},2500);
 </script></body></html>
