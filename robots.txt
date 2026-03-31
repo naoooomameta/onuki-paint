@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://naoooomameta.github.io/onuki-paint/sitemap.xml
