@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>DIY塗装で失敗しないための5つのポイント｜お役立ちコラム｜株式会社 大貫塗料</title>
+<meta name="description" content="DIY塗装で失敗しないための5つのポイントを塗料のプロが解説。下地処理、養生、塗料選び、塗り方、天候の注意点をご紹介。">
+<meta property="og:title" content="DIY塗装で失敗しないための5つのポイント｜大貫塗料">
+<meta property="og:description" content="DIY塗装の失敗を防ぐ5つのポイントをプロが解説">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Shippori+Mincho:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   ONUKI PAINT — Premium Corporate Site
+   Typography: Shippori Mincho (display) × Noto Sans JP (body)
+   Palette: Deep Indigo × Vermillion × Warm Parchment
+   ══════════════════════════════════════════════════════════════ */
+:root{
+  --navy:#0b2948;--navy-mid:#0e3461;--navy-light:#155a96;
+  --vermillion:#c93a1e;--vermillion-dark:#a83018;--vermillion-bg:#fdf5f3;
+  --teal:#1a7a6d;--teal-pale:#e8f5f2;
+  --ochre:#b07d2f;--ochre-pale:#fdf6e8;
+  --bg:#ffffff;--bg-warm:#faf9f7;--bg-gray:#f3f4f6;
+  --border:#e0e2e6;--border-light:#ededef;
+  --ink:#141414;--text:#3c3c3c;--text-sub:#717171;--text-mute:#a0a0a0;--white:#fff;
+  --font-display:'Shippori Mincho',serif;
+  --font-body:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;
+  --font-en:'Outfit',sans-serif;
+  --ease:cubic-bezier(.4,0,.2,1);--ease-out:cubic-bezier(.16,1,.3,1);
+  --header-h:76px;--max-w:1180px;
+  --shadow-s:0 1px 3px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.03);
+  --shadow-m:0 4px 12px rgba(0,0,0,.06),0 12px 36px rgba(0,0,0,.06);
+  --shadow-l:0 8px 24px rgba(0,0,0,.08),0 20px 60px rgba(0,0,0,.08);
+  --radius:6px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;background:none;font-family:inherit}ul{list-style:none}
+
+.wrap{max-width:var(--max-w);margin:0 auto;padding:0 36px}
+.sec{padding:88px 0}
+
+/* ── Reveal ── */
+[data-reveal]{opacity:0;transform:translateY(32px);transition:opacity .75s var(--ease-out),transform .75s var(--ease-out)}
+[data-reveal].v{opacity:1;transform:none}
+[data-reveal="1"]{transition-delay:.1s}[data-reveal="2"]{transition-delay:.2s}[data-reveal="3"]{transition-delay:.3s}[data-reveal="4"]{transition-delay:.4s}[data-reveal="5"]{transition-delay:.5s}
+
+/* ══════════════════════════════════════
+   HEADER + MEGA MENU
+   ══════════════════════════════════════ */
+.hd{position:fixed;top:0;left:0;right:0;z-index:500;background:var(--bg);border-bottom:1px solid var(--border);height:var(--header-h);transition:box-shadow .35s var(--ease)}
+.hd.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.07)}
+.hd-in{max-width:1360px;margin:0 auto;padding:0 36px;height:100%;display:flex;align-items:center;justify-content:space-between}
+
+/* Logo */
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:44px;height:44px;background:var(--navy);border-radius:4px;display:grid;place-items:center;color:var(--white);font-family:var(--font-display);font-size:22px;font-weight:800;line-height:1;transition:background .3s}
+.logo:hover .logo-mark{background:var(--navy-mid)}
+.logo-jp{font-family:var(--font-display);font-size:17px;font-weight:800;color:var(--ink);letter-spacing:1.5px;line-height:1.15}
+.logo-en{font-family:var(--font-en);font-size:9.5px;font-weight:500;color:var(--text-mute);letter-spacing:1.5px;text-transform:uppercase}
+
+/* Nav */
+.nav{display:flex;height:100%;align-items:center}
+.nav>li{height:100%;position:relative}
+.nav>li>a{display:flex;align-items:center;height:100%;padding:0 18px;font-size:13.5px;font-weight:500;color:var(--ink);position:relative;transition:color .25s}
+.nav>li>a::after{content:'';position:absolute;bottom:-1px;left:18px;right:18px;height:2.5px;background:var(--navy);border-radius:2px 2px 0 0;transform:scaleX(0);transition:transform .3s var(--ease-out)}
+.nav>li:hover>a{color:var(--navy)}
+.nav>li:hover>a::after{transform:scaleX(1)}
+
+/* Mega menu */
+.mega{position:absolute;top:100%;left:50%;transform:translateX(-50%);width:640px;background:var(--bg);border:1px solid var(--border);border-top:3px solid var(--navy);border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow-l);padding:28px 32px;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(8px);transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;pointer-events:none;z-index:600}
+.nav>li:hover .mega{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.mega-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.mega-sub{font-size:12px;color:var(--text-mute);margin-bottom:16px;line-height:1.6}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.mega-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius);transition:background .2s}
+.mega-item:hover{background:var(--bg-gray)}
+.mega-icon{width:36px;height:36px;border-radius:6px;display:grid;place-items:center;flex-shrink:0}
+.mega-item-text{font-size:12.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.mega-item-text small{display:block;font-weight:400;color:var(--text-mute);font-size:10.5px;margin-top:1px}
+
+/* Contact button */
+.nav-cta{display:flex;align-items:center;gap:7px;height:40px;padding:0 22px;background:var(--vermillion);color:var(--white);font-size:12.5px;font-weight:600;border-radius:4px;margin-left:12px;transition:background .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.nav-cta::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background .25s}
+.nav-cta:hover{background:var(--vermillion-dark);transform:translateY(-1px);box-shadow:0 4px 16px rgba(201,58,30,.25)}
+.nav-cta:hover::after{background:rgba(255,255,255,.06)}
+
+/* Hamburger */
+.ham{display:none;width:26px;height:18px;position:relative}
+.ham span{position:absolute;left:0;width:100%;height:1.5px;background:var(--ink);transition:.3s}.ham span:nth-child(1){top:0}.ham span:nth-child(2){top:8px}.ham span:nth-child(3){bottom:0;width:65%}
+
+/* Mobile overlay */
+.mob{position:fixed;inset:0;background:var(--bg);z-index:550;padding:88px 36px 36px;opacity:0;pointer-events:none;transition:.35s;overflow-y:auto}
+.mob.open{opacity:1;pointer-events:auto}
+.mob a{display:block;font-size:17px;font-weight:600;color:var(--ink);padding:15px 0;border-bottom:1px solid var(--border-light)}
+.mob-close{position:absolute;top:22px;right:36px;font-size:26px;color:var(--ink)}
+
+/* ══════════════════════════════════════
+   HERO — with progress bar
+   ══════════════════════════════════════ */
+.hero{margin-top:var(--header-h);position:relative;height:540px;overflow:hidden;background:var(--navy)}
+.slide{position:absolute;inset:0;display:flex;align-items:center;opacity:0;transition:opacity .9s ease;z-index:1}
+.slide.on{opacity:1;z-index:2}
+.slide-bg{position:absolute;inset:0;transition:transform 6s linear}
+.slide.on .slide-bg{transform:scale(1.04)}
+.s1 .slide-bg{background:linear-gradient(135deg,#0b2948,#134b82 50%,#1a6ab0)}
+.s2 .slide-bg{background:linear-gradient(135deg,#1b3b52,#1a6a70 50%,#1b8a7c)}
+.s3 .slide-bg{background:linear-gradient(135deg,#2a2535,#4a3d5c 50%,#6a5580)}
+.slide-bg::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='40' cy='40' r='1'/%3E%3C/g%3E%3C/svg%3E")}
+.slide-right{position:absolute;right:0;top:0;bottom:0;width:50%;display:flex;align-items:center;justify-content:center;opacity:.08}
+.slide-right svg{width:320px;height:320px}
+
+.slide-body{position:relative;z-index:3;max-width:var(--max-w);margin:0 auto;padding:0 36px;width:100%}
+.slide-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:50px;padding:5px 16px 5px 10px;font-size:11.5px;font-weight:500;color:rgba(255,255,255,.75);margin-bottom:22px;backdrop-filter:blur(6px)}
+.slide-dot{width:7px;height:7px;background:var(--vermillion);border-radius:50%}
+.slide h2{font-family:var(--font-display);font-size:clamp(26px,4.2vw,44px);font-weight:800;color:var(--white);line-height:1.42;margin-bottom:14px;max-width:520px;letter-spacing:.03em}
+.slide h2 em{font-style:normal;color:#6cc8e4}
+.slide p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:2.1;max-width:440px;margin-bottom:28px}
+.slide-cta{display:inline-flex;align-items:center;gap:9px;background:var(--white);color:var(--navy);padding:13px 30px;border-radius:4px;font-size:13.5px;font-weight:700;transition:all .3s var(--ease);position:relative;overflow:hidden}
+.slide-cta .arrow{transition:transform .3s var(--ease-out)}
+.slide-cta:hover{box-shadow:0 8px 28px rgba(0,0,0,.18);transform:translateY(-2px)}
+.slide-cta:hover .arrow{transform:translateX(3px)}
+
+/* Progress bar */
+.hero-progress{position:absolute;bottom:0;left:0;right:0;height:3px;z-index:10;display:flex}
+.hero-prog-seg{flex:1;position:relative;cursor:pointer;background:rgba(255,255,255,.1)}
+.hero-prog-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--white);transition:none}
+.hero-prog-seg.done .hero-prog-fill{width:100%}
+.hero-prog-seg.active .hero-prog-fill{animation:progFill var(--slide-duration) linear forwards}
+@keyframes progFill{from{width:0}to{width:100%}}
+
+/* Slide counter */
+.hero-counter{position:absolute;bottom:20px;right:36px;z-index:10;font-family:var(--font-en);font-size:13px;color:rgba(255,255,255,.35);letter-spacing:1px}
+.hero-counter strong{color:var(--white);font-weight:600}
+
+/* ══════════════════════════════════════
+   SECTION HEADING
+   ══════════════════════════════════════ */
+.sh{margin-bottom:36px}
+.sh-en{font-family:var(--font-en);font-size:12px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--navy);margin-bottom:4px}
+.sh-ja{font-family:var(--font-display);font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--ink);line-height:1.4;display:flex;align-items:center;gap:20px}
+.sh-ja::after{content:'';flex:1;height:1px;background:var(--border)}
+.sh-sub{font-size:13.5px;color:var(--text-sub);margin-top:6px;line-height:1.85}
+.sh--c{text-align:center}.sh--c .sh-en{text-align:center}.sh--c .sh-ja{justify-content:center}.sh--c .sh-ja::after{display:none}.sh--c .sh-sub{max-width:520px;margin:6px auto 0}
+.va{display:inline-flex;align-items:center;gap:5px;font-family:var(--font-en);font-size:12.5px;font-weight:600;color:var(--navy);letter-spacing:.5px}
+.va .arr{transition:transform .3s var(--ease-out)}.va:hover .arr{transform:translateX(3px)}
+
+/* ══════════════════════════════════════
+   PICKUP CARDS
+   ══════════════════════════════════════ */
+.pickup{padding:56px 0 0}
+.pk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pk{display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light);transition:box-shadow .35s var(--ease),transform .35s var(--ease)}
+.pk:hover{box-shadow:var(--shadow-m);transform:translateY(-5px)}
+.pk-img{aspect-ratio:16/10;overflow:hidden;position:relative}
+.pk-img>*{width:100%;height:100%;transition:transform .55s var(--ease-out)}
+.pk:hover .pk-img>*{transform:scale(1.05)}
+.pk-body{padding:14px 16px}
+.pk-tag{display:inline-block;font-size:10.5px;font-weight:600;padding:2px 9px;border-radius:3px;margin-bottom:6px}
+.pk-title{font-size:13.5px;font-weight:600;color:var(--ink);line-height:1.55}
+
+/* ══════════════════════════════════════
+   TOPICS
+   ══════════════════════════════════════ */
+.tp-list{border-top:1px solid var(--border)}
+.tp{display:flex;align-items:flex-start;gap:18px;padding:18px 12px;border-bottom:1px solid var(--border-light);transition:background .25s,padding .3s var(--ease-out);border-radius:var(--radius)}
+.tp:hover{background:var(--bg-warm);padding-left:20px}
+.tp-meta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.tp-date{font-family:var(--font-en);font-size:13.5px;color:var(--text-mute);min-width:96px}
+.tp-tag{font-size:10px;font-weight:700;color:var(--white);padding:2px 10px;border-radius:3px;white-space:nowrap}
+.tp-txt{font-size:14px;font-weight:500;color:var(--ink);line-height:1.65}
+
+/* ══════════════════════════════════════
+   SERVICE CARDS — with SVG icons
+   ══════════════════════════════════════ */
+.sv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sv{display:block;background:var(--bg);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light);transition:box-shadow .35s var(--ease),transform .35s var(--ease)}
+.sv:hover{box-shadow:var(--shadow-l);transform:translateY(-6px)}
+.sv-icon{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.sv-icon svg{width:56px;height:56px;opacity:.85;transition:transform .5s var(--ease-out),opacity .3s}
+.sv:hover .sv-icon svg{transform:scale(1.1) translateY(-2px);opacity:1}
+.sv-icon .sv-num{position:absolute;top:12px;left:14px;font-family:var(--font-en);font-size:12px;font-weight:700;color:var(--white);background:rgba(0,0,0,.2);width:28px;height:28px;border-radius:4px;display:grid;place-items:center;backdrop-filter:blur(4px)}
+.sv-body{padding:20px}
+.sv-title{font-family:var(--font-display);font-size:16.5px;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.sv-desc{font-size:12.5px;color:var(--text-sub);line-height:1.95;margin-bottom:14px}
+.sv-link{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--navy);transition:gap .3s var(--ease-out)}
+.sv:hover .sv-link{gap:9px;color:var(--navy-light)}
+.sv-link .arr{transition:transform .3s var(--ease-out)}.sv:hover .sv-link .arr{transform:translateX(3px)}
+
+/* Service icon backgrounds */
+.sv-icon-1{background:linear-gradient(135deg,#e8f0f8,#d0e3f4)}
+.sv-icon-2{background:linear-gradient(135deg,#e8f4f0,#c8e8dc)}
+.sv-icon-3{background:linear-gradient(135deg,#fdf6e8,#f5e8c8)}
+.sv-icon-4{background:linear-gradient(135deg,#f0ece8,#e0d8cc)}
+.sv-icon-5{background:linear-gradient(135deg,#e8ecf4,#d0d8e8)}
+.sv-icon-6{background:linear-gradient(135deg,#f4e8ee,#e8d0dc)}
+
+/* ══════════════════════════════════════
+   FEATURE — why us
+   ══════════════════════════════════════ */
+.ft-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ft{text-align:center;padding:28px 16px;border:1px solid var(--border-light);border-radius:var(--radius);transition:all .35s var(--ease);position:relative;overflow:hidden}
+.ft::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--navy);transform:scaleX(0);transition:transform .4s var(--ease-out)}
+.ft:hover{border-color:var(--navy);box-shadow:0 4px 16px rgba(11,41,72,.07);transform:translateY(-3px)}
+.ft:hover::before{transform:scaleX(1)}
+.ft-ic{width:56px;height:56px;margin:0 auto 14px;background:var(--bg-gray);border-radius:50%;display:grid;place-items:center;color:var(--navy);transition:all .35s var(--ease)}
+.ft:hover .ft-ic{background:var(--navy);color:var(--white)}
+.ft h4{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px;line-height:1.45}
+.ft p{font-size:12px;color:var(--text-sub);line-height:1.9}
+
+/* ══════════════════════════════════════
+   WORKS
+   ══════════════════════════════════════ */
+.wk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wk{display:block;position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3}
+.wk-bg{width:100%;height:100%;transition:transform .65s var(--ease-out)}
+.wk:hover .wk-bg{transform:scale(1.06)}
+.wk-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,20,35,.82),rgba(10,20,35,0) 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;transition:background .3s}
+.wk:hover .wk-ov{background:linear-gradient(0deg,rgba(10,20,35,.9),rgba(10,20,35,.05) 65%)}
+.wk-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--white);background:rgba(255,255,255,.15);backdrop-filter:blur(4px);padding:2px 10px;border-radius:3px;margin-bottom:5px;width:fit-content;transition:background .3s}
+.wk:hover .wk-tag{background:var(--navy-light)}
+.wk-title{font-size:13.5px;font-weight:600;color:var(--white);line-height:1.55}
+
+/* ══════════════════════════════════════
+   CTA
+   ══════════════════════════════════════ */
+.cta{background:var(--navy);padding:52px 0;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(26,106,176,.12),transparent 60%)}
+.cta-in{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.cta h3{font-family:var(--font-display);font-size:clamp(20px,3vw,26px);font-weight:800;color:var(--white);margin-bottom:4px}
+.cta .sub{font-size:13px;color:rgba(255,255,255,.45)}
+.cta-acts{display:flex;align-items:center;gap:20px;flex-shrink:0}
+.cta-tel{display:flex;align-items:center;gap:10px;color:var(--white)}
+.cta-tel-ic{width:44px;height:44px;border:1.5px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;transition:all .3s}
+.cta-tel:hover .cta-tel-ic{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.cta-tel-num{font-family:var(--font-en);font-size:26px;font-weight:700;line-height:1;letter-spacing:.5px}
+.cta-tel-label{font-size:10.5px;color:rgba(255,255,255,.4)}
+.cta-btn{display:flex;align-items:center;gap:8px;background:var(--vermillion);color:var(--white);padding:14px 32px;border-radius:4px;font-size:13.5px;font-weight:700;transition:all .3s var(--ease);position:relative;overflow:hidden}
+.cta-btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background .25s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,58,30,.3)}
+.cta-btn:hover::before{background:rgba(255,255,255,.08)}
+
+/* ══════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════ */
+.ft-sect{background:#151820;padding:52px 0 0}
+.ft-grid2{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.05)}
+.ft-brand p{font-size:12.5px;color:rgba(255,255,255,.25);line-height:2;margin-top:14px;max-width:300px}
+.ft-soc{display:flex;gap:8px;margin-top:18px}
+.ft-soc a{width:34px;height:34px;border:1px solid rgba(255,255,255,.08);border-radius:4px;display:grid;place-items:center;color:rgba(255,255,255,.35);font-family:var(--font-en);font-size:10px;font-weight:600;transition:.25s}
+.ft-soc a:hover{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.03)}
+.ft-col-h{font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.ft-col a{display:block;font-size:12.5px;color:rgba(255,255,255,.25);padding:4px 0;transition:.25s}
+.ft-col a:hover{color:rgba(255,255,255,.6)}
+.ft-bot{padding:18px 0;display:flex;justify-content:space-between;align-items:center;font-size:10.5px;color:rgba(255,255,255,.15)}
+.ft-bot a{color:rgba(255,255,255,.15);transition:.25s}.ft-bot a:hover{color:rgba(255,255,255,.35)}
+
+/* ══════════════════════════════════════
+   BUTTON RIPPLE
+   ══════════════════════════════════════ */
+.ripple{position:relative;overflow:hidden}
+.ripple-wave{position:absolute;border-radius:50%;background:rgba(255,255,255,.25);transform:scale(0);animation:rippleAnim .6s ease-out forwards;pointer-events:none}
+@keyframes rippleAnim{to{transform:scale(4);opacity:0}}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+.float-cta{position:fixed;bottom:24px;right:24px;z-index:400;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(20px);transition:opacity .4s cubic-bezier(.4,0,.2,1),transform .4s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.float-cta.show{opacity:1;transform:none;pointer-events:auto}
+.float-btn{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.06),0 12px 36px rgba(0,0,0,.06);transition:transform .3s,box-shadow .3s}
+.float-btn:hover{transform:scale(1.08);box-shadow:0 8px 24px rgba(0,0,0,.08),0 20px 60px rgba(0,0,0,.08)}
+.float-btn.phone{background:#c93a1e;color:#fff}
+.float-btn.line{background:#06c755;color:#fff}
+.float-btn.top{background:#fff;color:#0b2948;border:1px solid #e0e2e6}
+.float-btn.top:hover{background:#0b2948;color:#fff}
+@media(max-width:1024px){
+  .pk-grid{grid-template-columns:1fr 1fr}.sv-grid{grid-template-columns:1fr 1fr}.ft-grid{grid-template-columns:1fr 1fr}
+  .wk-grid{grid-template-columns:1fr 1fr}.ft-grid2{grid-template-columns:1fr 1fr}
+  .cta-in{flex-direction:column;text-align:center}.cta-acts{flex-direction:column}
+  .mega{width:480px}
+}
+@media(max-width:768px){
+  :root{--header-h:60px}.wrap{padding:0 20px}.sec{padding:60px 0}
+  .nav{display:none}.nav-cta{display:none}.ham{display:block}
+  .hd-in{padding:0 20px}
+  .hero{height:420px}
+  .slide-right{display:none}.slide h2{max-width:100%}.slide p{max-width:100%}
+  .pk-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .sv-grid,.wk-grid{grid-template-columns:1fr}
+  .ft-grid,.ft-grid2{grid-template-columns:1fr}
+  .tp{flex-direction:column;gap:4px}
+  .ft-bot{flex-direction:column;gap:8px;text-align:center}
+  .hero-counter{display:none}
+  .float-cta{bottom:16px;right:16px}.float-btn{width:50px;height:50px}
+}
+
+/* ── PAGE HERO ── */
+.pg-hero{margin-top:var(--header-h);background:var(--navy);padding:52px 0;position:relative;overflow:hidden}
+.pg-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--navy),var(--navy-mid) 50%,var(--navy-light));opacity:.6}
+.pg-hero::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='40' cy='40' r='1'/%3E%3C/g%3E%3C/svg%3E")}
+.pg-hero-in{position:relative;z-index:1}
+.pg-hero-en{font-family:var(--font-en);font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.pg-hero h1{font-family:var(--font-display);font-size:clamp(24px,3.5vw,34px);font-weight:800;color:var(--white);line-height:1.4}
+.pg-hero .bc{margin-top:14px;font-size:11.5px;color:rgba(255,255,255,.3)}
+.pg-hero .bc a{color:rgba(255,255,255,.4);transition:color .25s}
+.pg-hero .bc a:hover{color:var(--white)}
+.pg-hero .bc span{margin:0 7px}
+
+/* ── Content blocks ── */
+.content h3{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--ink);margin-bottom:14px;padding-left:16px;border-left:4px solid var(--navy);line-height:1.5}
+.content p{font-size:14px;line-height:2.2;margin-bottom:18px;color:var(--text)}
+.content-img{border-radius:var(--radius);overflow:hidden;margin:24px 0;aspect-ratio:16/9;background:var(--bg-gray);display:grid;place-items:center;font-size:12px;color:var(--text-mute)}
+.content-block{margin-bottom:44px}
+.content-lead{font-size:15px;line-height:2.2;color:var(--text);margin-bottom:32px;padding:24px 28px;background:var(--bg-warm);border-left:4px solid var(--navy);border-radius:0 var(--radius) var(--radius) 0}
+
+/* ── Company table ── */
+.co-table{width:100%}
+.co-table tr{border-bottom:1px solid var(--border-light)}
+.co-table th{font-size:13px;font-weight:600;color:var(--ink);padding:14px 16px 14px 0;vertical-align:top;width:100px;white-space:nowrap}
+.co-table td{font-size:13px;color:var(--text);padding:14px 0;vertical-align:top;line-height:1.85}
+
+/* ── Map ── */
+.map-box{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:var(--bg-gray);border:1px solid var(--border-light)}
+.map-box iframe{width:100%;height:100%;border:none}
+
+/* ── Makers ── */
+.mk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.mk-item{border:1px solid var(--border-light);border-radius:var(--radius);padding:14px;display:grid;place-items:center;height:56px;background:var(--bg);font-size:11px;color:var(--text-mute);font-weight:500;transition:all .25s}
+.mk-item:hover{border-color:var(--navy);box-shadow:0 2px 8px rgba(11,41,72,.05)}
+
+/* ── Pagination ── */
+.pgn{display:flex;justify-content:center;gap:6px;margin-top:44px}
+.pgn a,.pgn span{width:38px;height:38px;display:grid;place-items:center;border:1px solid var(--border);border-radius:var(--radius);font-size:13px;font-weight:600;color:var(--text-sub);transition:all .25s}
+.pgn a:hover{border-color:var(--navy);color:var(--navy)}
+.pgn .cur{background:var(--navy);color:var(--white);border-color:var(--navy)}
+
+/* ── Contact form ── */
+.fg{margin-bottom:22px}
+.fl{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.fl .req{font-size:10.5px;color:var(--vermillion);margin-left:6px;font-weight:700}
+.fi,.fta,.fsel{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius);font-size:14px;font-family:var(--font-body);transition:border-color .25s;background:var(--bg)}
+.fi:focus,.fta:focus,.fsel:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(11,41,72,.06)}
+.fta{min-height:160px;resize:vertical}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f-submit{display:inline-flex;align-items:center;gap:8px;background:var(--vermillion);color:var(--white);padding:14px 44px;border-radius:var(--radius);font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .3s var(--ease);font-family:var(--font-body);position:relative;overflow:hidden}
+.f-submit:hover{background:var(--vermillion-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,58,30,.25)}
+
+/* ── 2col layout ── */
+.lay-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+
+@media(max-width:1024px){.mk-grid{grid-template-columns:repeat(3,1fr)}.lay-2{grid-template-columns:1fr}.fr{grid-template-columns:1fr}}
+@media(max-width:768px){.mk-grid{grid-template-columns:1fr 1fr}.pg-hero{padding:36px 0}}
+@media(max-width:768px){.philosophy-values{grid-template-columns:1fr !important}.qual-grid{grid-template-columns:1fr !important}}
+/* ── Article ── */.article-wrap{max-width:800px;margin:0 auto}.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px}.article-date{font-family:var(--font-en);font-size:13px;color:var(--text-mute)}.article-tag{font-size:10.5px;font-weight:700;padding:3px 12px;border-radius:3px}.article-title{font-family:var(--font-display);font-size:clamp(22px,3.5vw,30px);font-weight:800;color:var(--ink);line-height:1.55;margin-bottom:24px}.article-hero{border-radius:var(--radius);overflow:hidden;aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;margin-bottom:36px}.article-body h2{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--ink);margin:36px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--navy);line-height:1.5}.article-body h3{font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 10px;padding-left:14px;border-left:3px solid var(--navy);line-height:1.5}.article-body p{font-size:14.5px;line-height:2.2;color:var(--text);margin-bottom:16px}.article-body ul,.article-body ol{margin:12px 0 18px 20px;font-size:14px;color:var(--text);line-height:2.2}.article-body li{margin-bottom:4px}.article-body table{width:100%;border-collapse:collapse;margin:16px 0 24px}.article-body th{font-size:13px;font-weight:600;color:var(--ink);padding:10px 14px;background:var(--bg-gray);border:1px solid var(--border-light);text-align:left}.article-body td{font-size:13px;color:var(--text);padding:10px 14px;border:1px solid var(--border-light);line-height:1.75}.article-infobox{padding:20px 24px;background:var(--ochre-pale);border-left:4px solid var(--ochre);border-radius:0 var(--radius) var(--radius) 0;margin:20px 0;font-size:14px;color:var(--text);line-height:2}.article-infobox strong{color:var(--ink)}.article-warning{padding:20px 24px;background:var(--vermillion-bg);border-left:4px solid var(--vermillion);border-radius:0 var(--radius) var(--radius) 0;margin:20px 0;font-size:14px;color:var(--text);line-height:2}.article-point{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--border-light)}.article-point-num{width:36px;height:36px;background:var(--navy);color:var(--white);border-radius:50%;display:grid;place-items:center;font-family:var(--font-en);font-size:15px;font-weight:700;flex-shrink:0}.article-cta{margin:36px 0;padding:28px;background:var(--bg-warm);border:1px solid var(--border-light);border-radius:var(--radius);text-align:center}.article-cta h3{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px}.article-cta p{font-size:13.5px;color:var(--text-sub);margin-bottom:16px}.article-cta-btn{display:inline-flex;align-items:center;gap:7px;padding:12px 28px;background:var(--vermillion);color:var(--white);border-radius:4px;font-size:14px;font-weight:700;transition:all .3s}.article-cta-btn:hover{background:var(--vermillion-dark);transform:translateY(-2px);box-shadow:0 4px 16px rgba(201,58,30,.25)}.article-author{display:flex;align-items:center;gap:14px;padding:20px;background:var(--bg-gray);border-radius:var(--radius);margin:36px 0}.article-author-avatar{width:48px;height:48px;background:var(--navy);border-radius:50%;display:grid;place-items:center;color:var(--white);font-family:var(--font-display);font-size:20px;font-weight:800;flex-shrink:0}.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}@media(max-width:768px){.related-grid{grid-template-columns:1fr}}
+/* ── Article ── */
+.article-wrap{max-width:800px;margin:0 auto}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.article-date{font-family:var(--font-en);font-size:13px;color:var(--text-mute)}
+.article-tag{font-size:10.5px;font-weight:700;padding:3px 12px;border-radius:3px}
+.article-title{font-family:var(--font-display);font-size:clamp(22px,3.5vw,30px);font-weight:800;color:var(--ink);line-height:1.55;margin-bottom:24px}
+.article-hero{border-radius:var(--radius);overflow:hidden;aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;margin-bottom:36px}
+.article-body h2{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--ink);margin:36px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--navy);line-height:1.5}
+.article-body h3{font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 10px;padding-left:14px;border-left:3px solid var(--navy);line-height:1.5}
+.article-body p{font-size:14.5px;line-height:2.2;color:var(--text);margin-bottom:16px}
+.article-body ul,.article-body ol{margin:12px 0 18px 20px;font-size:14px;color:var(--text);line-height:2.2}
+.article-body li{margin-bottom:4px}
+.article-body table{width:100%;border-collapse:collapse;margin:16px 0 24px}
+.article-body th{font-size:13px;font-weight:600;color:var(--ink);padding:10px 14px;background:var(--bg-gray);border:1px solid var(--border-light);text-align:left}
+.article-body td{font-size:13px;color:var(--text);padding:10px 14px;border:1px solid var(--border-light);line-height:1.75}
+.article-infobox{padding:20px 24px;background:var(--ochre-pale);border-left:4px solid var(--ochre);border-radius:0 var(--radius) var(--radius) 0;margin:20px 0;font-size:14px;color:var(--text);line-height:2}
+.article-infobox strong{color:var(--ink)}
+.article-warning{padding:20px 24px;background:var(--vermillion-bg);border-left:4px solid var(--vermillion);border-radius:0 var(--radius) var(--radius) 0;margin:20px 0;font-size:14px;color:var(--text);line-height:2}
+.article-point{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--border-light)}
+.article-point-num{width:36px;height:36px;background:var(--navy);color:var(--white);border-radius:50%;display:grid;place-items:center;font-family:var(--font-en);font-size:15px;font-weight:700;flex-shrink:0}
+.article-cta{margin:36px 0;padding:28px;background:var(--bg-warm);border:1px solid var(--border-light);border-radius:var(--radius);text-align:center}
+.article-cta h3{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--ink);margin-bottom:10px}
+.article-cta p{font-size:13.5px;color:var(--text-sub);margin-bottom:16px}
+.article-cta-btn{display:inline-flex;align-items:center;gap:7px;padding:12px 28px;background:var(--vermillion);color:var(--white);border-radius:4px;font-size:14px;font-weight:700;transition:all .3s}
+.article-cta-btn:hover{background:var(--vermillion-dark);transform:translateY(-2px);box-shadow:0 4px 16px rgba(201,58,30,.25)}
+.article-author{display:flex;align-items:center;gap:14px;padding:20px;background:var(--bg-gray);border-radius:var(--radius);margin:36px 0}
+.article-author-avatar{width:48px;height:48px;background:var(--navy);border-radius:50%;display:grid;place-items:center;color:var(--white);font-family:var(--font-display);font-size:20px;font-weight:800;flex-shrink:0}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+@media(max-width:768px){.related-grid{grid-template-columns:1fr}}
+
+</style>
+<body>
+
+<header class="hd" id="hd">
+<div class="hd-in">
+  <a href="index.html" class="logo"><div class="logo-mark">大</div><div><div class="logo-jp">大貫塗料</div><div class="logo-en">Onuki Paint Co., Ltd.</div></div></a>
+  <ul class="nav">
+    <li><a href="stores.html" class="">塗料専門店として</a>
+      <div class="mega"><div class="mega-title">塗料専門店として</div><div class="mega-sub">塗料のプロが、最適な一色をご提案します。</div>
+        <div class="mega-grid">
+          <a href="stores.html" class="mega-item"><div class="mega-icon" style="background:var(--teal-pale)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="mega-item-text">調色サービス<small>お好みの色を制作</small></div></a>
+          <a href="stores.html" class="mega-item"><div class="mega-icon" style="background:var(--ochre-pale)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ochre)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div><div class="mega-item-text">量り売り<small>1Lから対応</small></div></a>
+          <a href="stores.html" class="mega-item"><div class="mega-icon" style="background:var(--vermillion-bg)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vermillion)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="mega-item-text">配達対応<small>現場へ直接納品</small></div></a>
+        </div>
+      </div>
+    </li>
+    <li><a href="business.html" class="">業務内容</a>
+      <div class="mega" style="width:720px"><div class="mega-title">業務内容</div><div class="mega-sub">塗料販売から各種塗装工事まで、6つの事業を展開しています。</div>
+        <div class="mega-grid">
+          <a href="business.html" class="mega-item"><div class="mega-icon" style="background:#e8f0f8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#155a96" stroke-width="1.5"><path d="M20 7h-3V4a1 1 0 00-1-1H8a1 1 0 00-1 1v3H4a1 1 0 00-1 1v12h18V8a1 1 0 00-1-1z"/></svg></div><div class="mega-item-text">塗料・接着剤販売<small>DIY〜業務用</small></div></a>
+          <a href="business.html" class="mega-item"><div class="mega-icon" style="background:#e8f4f0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a6d" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14"/></svg></div><div class="mega-item-text">屋根・外壁塗装<small>住宅メンテナンス</small></div></a>
+          <a href="business.html" class="mega-item"><div class="mega-icon" style="background:#fdf6e8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b07d2f" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg></div><div class="mega-item-text">遮熱・耐熱塗装<small>省エネに貢献</small></div></a>
+          <a href="business.html" class="mega-item"><div class="mega-icon" style="background:#f0ece8"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a6a5a" stroke-width="1.5"><rect x="1" y="14" width="22" height="7" rx="1"/><path d="M5 14V8M9 14V6M13 14V8M17 14V6"/></svg></div><div class="mega-item-text">木床研磨塗装<small>フローリング再生</small></div></a>
+          <a href="business.html" class="mega-item"><div class="mega-icon" style="background:#e8ecf4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4a5a7a" stroke-width="1.5"><rect x="2" y="16" width="20" height="5" rx="1"/><path d="M4 16V8a2 2 0 012-2h12a2 2 0 012 2v8"/></svg></div><div class="mega-item-text">塗床工事<small>工場・倉庫の床</small></div></a>
+          <a href="business.html" class="mega-item"><div class="mega-icon" style="background:#f4e8ee"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8a5a6a" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/></svg></div><div class="mega-item-text">看板工事<small>制作〜メンテナンス</small></div></a>
+        </div>
+      </div>
+    </li>
+    <li><a href="case.html" class="">施工事例</a></li>
+    <li><a href="product.html" class="">商品紹介</a></li>
+    <li><a href="company.html" class=" is-current">会社案内</a></li>
+    <li><a href="contact.html" class="nav-cta ripple"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>お問い合わせ</a></li>
+  </ul>
+  <button class="ham" onclick="document.getElementById('mob').classList.toggle('open');document.body.style.overflow=document.getElementById('mob').classList.contains('open')?'hidden':''"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="mob" id="mob"><button class="mob-close" onclick="document.getElementById('mob').classList.remove('open');document.body.style.overflow=''">×</button><a href="index.html">ホーム</a><a href="stores.html">塗料専門店として</a><a href="business.html">業務内容</a><a href="case.html">施工事例</a><a href="product.html">商品紹介</a><a href="company.html">会社案内</a><a href="contact.html">お問い合わせ</a></div>
+
+<section class="pg-hero">
+  <div class="wrap pg-hero-in">
+    <div class="pg-hero-en">Column</div>
+    <h1>お役立ちコラム</h1>
+    <div class="bc"><a href="index.html">トップ</a><span>＞</span><a href="column.html">お役立ちコラム</a><span>＞</span><span>DIY塗装の5つのポイント</span></div>
+  </div>
+</section>
+
+<section class="sec">
+<div class="wrap">
+<div class="article-wrap">
+  <div class="article-meta" data-reveal>
+    <span class="article-date">2025.08.22</span>
+    <span class="article-tag" style="background:#e8f5e9;color:#1a7a6d">DIY</span>
+  </div>
+  <h1 class="article-title" data-reveal>DIY塗装で失敗しないための5つのポイント</h1>
+  <div class="article-hero" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9)" data-reveal>
+    <svg width="280" height="160" viewBox="0 0 280 160" fill="none">
+      <rect x="60" y="30" width="30" height="80" rx="5" stroke="#1a7a6d" stroke-width="1.5" fill="white" fill-opacity=".9"/>
+      <rect x="67" y="38" width="16" height="10" rx="2" fill="#1a7a6d" fill-opacity=".15"/>
+      <path d="M75 30V22" stroke="#1a7a6d" stroke-width="1.5"/>
+      <rect x="120" y="50" width="50" height="60" rx="4" stroke="#1a7a6d" stroke-width="1.5" fill="white" fill-opacity=".9"/>
+      <rect x="128" y="58" width="34" height="12" rx="2" fill="#1a7a6d" fill-opacity=".12"/>
+      <path d="M135 78h20M135 86h14" stroke="#1a7a6d" stroke-width="1" opacity=".4"/>
+      <rect x="195" y="40" width="12" height="70" rx="3" stroke="#1a7a6d" stroke-width="1.5" fill="white" fill-opacity=".9"/>
+      <rect x="198" y="46" width="6" height="20" rx="1" fill="#1a7a6d" fill-opacity=".2"/>
+      <path d="M201 40V30l-3-5" stroke="#1a7a6d" stroke-width="1.2"/>
+      <rect x="30" y="125" width="220" height="10" rx="2" fill="#1a7a6d" fill-opacity=".06" stroke="#1a7a6d" stroke-width=".5"/>
+    </svg>
+  </div>
+
+  <div class="article-body" data-reveal>
+    <p>「自分で壁を塗ってみたい」「家具の色を変えたい」——DIY塗装の人気が高まっています。しかし、ちょっとしたコツを知らないだけで、ムラになったり剥がれたりと残念な結果に。塗料のプロが、DIY塗装で失敗しないための5つのポイントをお伝えします。</p>
+
+    <h2>ポイント1：下地処理を丁寧に</h2>
+    <div class="article-infobox"><strong>下地処理が仕上がりの8割を決めます。</strong>汚れ・ホコリ・油分をしっかり除去し、サンドペーパーで表面を軽く研磨（ケレン）してから塗装に入りましょう。古い塗膜が剥がれている場合は、スクレーパーで除去してください。</div>
+    <ul>
+      <li>中性洗剤で汚れを落とし、よく乾燥させる</li>
+      <li>#240〜#320のサンドペーパーで軽く研磨</li>
+      <li>研磨粉を拭き取り、プライマー（下塗り材）を塗布</li>
+    </ul>
+
+    <h2>ポイント2：養生テープは惜しまず使う</h2>
+    <p>塗りたくない部分をマスキングテープと養生シートでしっかり覆いましょう。「少しくらい大丈夫」と省略すると、はみ出しや飛散で台無しになります。</p>
+    <ul>
+      <li>マスキングテープは塗装面との境界に真っ直ぐ貼る</li>
+      <li>養生シート（マスカー）で床や周囲を広めにカバー</li>
+      <li>テープは塗料が乾ききる前に剥がすのがコツ</li>
+    </ul>
+
+    <h2>ポイント3：塗料選びは用途に合わせて</h2>
+    <table>
+      <tr><th>用途</th><th>おすすめ塗料</th><th>特徴</th></tr>
+      <tr><td>室内の壁・天井</td><td>水性エマルション</td><td>臭いが少なく室内向き</td></tr>
+      <tr><td>木製家具</td><td>水性ウレタン</td><td>耐久性あり、仕上がり綺麗</td></tr>
+      <tr><td>屋外の木部</td><td>油性ステイン</td><td>浸透型で木目を活かせる</td></tr>
+      <tr><td>金属部</td><td>錆止め入り油性</td><td>防錆効果あり</td></tr>
+    </table>
+    <p>迷ったら大貫塗料にお気軽にご相談ください。用途・素材に合った最適な塗料をご提案します。</p>
+
+    <h2>ポイント4：薄く2〜3回塗りが基本</h2>
+    <p>一度に厚く塗ると、ムラ・タレ・乾燥不良の原因になります。<strong>薄く均一に塗り、乾燥後にもう一度塗る</strong>のが美しい仕上がりのコツ。2〜3回塗りが基本です。</p>
+    <div class="article-infobox"><strong>乾燥時間の目安：</strong>水性塗料は夏場1〜2時間、冬場2〜4時間。油性塗料は4〜8時間。完全乾燥前に重ね塗りすると剥がれの原因に。</div>
+
+    <h2>ポイント5：天候と気温に注意</h2>
+    <p>屋外塗装は天候の影響を大きく受けます。以下の条件を守りましょう。</p>
+    <ul>
+      <li>気温：15〜30°Cが最適（5°C以下は塗装不可）</li>
+      <li>湿度：85%以下（雨天・高湿度は避ける）</li>
+      <li>風：強風の日は塗料が飛散するため避ける</li>
+      <li>時間帯：朝露が乾いた午前中〜午後3時頃まで</li>
+    </ul>
+
+    <div class="article-cta">
+      <h3>塗料選びに困ったら大貫塗料へ</h3>
+      <p>DIY用塗料から業務用まで、プロが最適な塗料をご提案します。調色サービスも1缶から対応。</p>
+      <a href="contact.html" class="article-cta-btn">お気軽にご相談ください <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+
+  <div class="article-author" data-reveal>
+    <div class="article-author-avatar">大</div>
+    <div><div style="font-size:13px;font-weight:700;color:var(--ink)">大貫塗料 スタッフ</div><div style="font-size:12px;color:var(--text-mute);margin-top:2px">塗料の専門家として、お客様に役立つ情報をお届けします。</div></div>
+  </div>
+
+  <div data-reveal>
+    <h2 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--ink);margin:36px 0 16px">関連記事</h2>
+    <div class="related-grid">
+      <a href="column-01.html" style="display:block;padding:16px;border:1px solid var(--border-light);border-radius:var(--radius);color:inherit;transition:box-shadow .3s,transform .3s"><span style="font-size:11px;color:var(--text-mute);font-family:var(--font-en)">2025.10.15</span><div style="font-size:14px;font-weight:600;color:var(--ink);margin-top:4px;line-height:1.55">外壁塗装の塗り替え時期の見極め方</div></a>
+      <a href="column-03.html" style="display:block;padding:16px;border:1px solid var(--border-light);border-radius:var(--radius);color:inherit;transition:box-shadow .3s,transform .3s"><span style="font-size:11px;color:var(--text-mute);font-family:var(--font-en)">2025.06.10</span><div style="font-size:14px;font-weight:600;color:var(--ink);margin-top:4px;line-height:1.55">遮熱塗料で夏の光熱費を削減！効果と選び方</div></a>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<section class="cta">
+<div class="wrap"><div class="cta-in">
+  <div><h3>塗料のこと、何でもお尋ねください。</h3><p class="sub">ご来店・お電話・メール、お気軽にお問い合わせください。</p></div>
+  <div class="cta-acts">
+    <a href="tel:0289640046" class="cta-tel"><div class="cta-tel-ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="cta-tel-label">お電話でのお問い合わせ</div><div class="cta-tel-num">0289-64-0046</div></div></a>
+    <a href="contact.html" class="cta-btn ripple">メールで問い合わせ <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div></div>
